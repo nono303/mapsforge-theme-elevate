@@ -951,11 +951,20 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			</rule>
 		</rule>
 		<rule e="way" k="natural|landuse" v="forest|wood" closed="yes">
-			<rule e="any" k="*" v="*" zoom-max="13" zoom-min="8">
-				<area fill="#A5CBA5" />
-				<line stroke="#A5CBA5" stroke-width="0.2" />
-			</rule>
+			<area fill="#A5CBA5" />
+			<line stroke="#A5CBA5" stroke-width="0.2" />
 			<rule e="any" k="*" v="*" zoom-min="14" zoom-max="16">
+				<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved">
+					<area src="file:ele-res/p_wood-coniferous.svg" symbol-height="32" />
+				</rule>
+				<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved">
+					<area src="file:ele-res/p_wood-deciduous.svg" symbol-height="32" />
+				</rule>
+				<rule e="any" k="wood|leaf_type" v="~|mixed|leafless">
+					<area src="file:ele-res/p_wood-mixed.svg" symbol-height="32" />
+				</rule>
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="17">
 				<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved">
 					<area src="file:ele-res/p_wood-coniferous.svg" symbol-height="64" />
 				</rule>
@@ -966,28 +975,30 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					<area src="file:ele-res/p_wood-mixed.svg" symbol-height="64" />
 				</rule>
 			</rule>
-			<rule e="any" k="*" v="*" zoom-min="17">
-				<rule e="any" k="wood|leaf_type" v="coniferous|needleleaved">
-					<area src="file:ele-res/p_wood-coniferous.svg" symbol-height="128" />
-				</rule>
-				<rule e="any" k="wood|leaf_type" v="deciduous|broadleaved">
-					<area src="file:ele-res/p_wood-deciduous.svg" symbol-height="128" />
-				</rule>
-				<rule e="any" k="wood|leaf_type" v="~|mixed|leafless">
-					<area src="file:ele-res/p_wood-mixed.svg" symbol-height="128" />
-				</rule>
-			</rule>
 		</rule>
 		<rule e="way" k="landuse|natural" v="meadow|grass|grassland|field|farm|farmland|rock|heath|scrub|fell|scree|shingle|glacier|quarry|beach|sand|desert|orchard|vineyard|plant_nursery|garden|village_green|common|allotments|greenfield|golf_course|cemetery|grave_yard" closed="yes">
 			<area fill="#F8F8F8" />
 		</rule>
-		<rule e="way" k="landuse|natural" v="meadow|grass|grassland" closed="yes" zoom-min="13">
-			<area fill="#BBE6FFDB" />
+		<!-- prairie -->
+		<rule e="way" k="landuse|natural" v="meadow|grass|grassland" closed="yes" zoom-min="12">
+			<area fill="#F8FFF5" />
+			<rule e="any" k="*" v="*" zoom-max="14">
+				<area src="file:ele-res/p_meadow.svg" symbol-height="32" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="15">
+				<area src="file:ele-res/p_meadow.svg" symbol-height="48" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="16" zoom-max="16">
+				<area src="file:ele-res/p_meadow.svg" symbol-height="64" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="17">
+				<area src="file:ele-res/p_meadow.svg" symbol-height="96" />
+			</rule>
 		</rule>
-		<rule e="way" k="landuse" v="field|farm|farmland" closed="yes" zoom-min="13">
+		<rule e="way" k="landuse" v="field|farm|farmland" closed="yes" zoom-min="12">
 			<area fill="#BBF5FFDB" />
 		</rule>
-		<rule e="way" k="natural" v="marsh|wetland" closed="yes" zoom-min="13">
+		<rule e="way" k="natural" v="marsh|wetland" closed="yes" zoom-min="12">
 			<rule e="any" k="*" v="*" zoom-max="14">
 				<area src="file:ele-res/p_marsh.svg" symbol-height="16" />
 			</rule>
@@ -998,19 +1009,23 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<area src="file:ele-res/p_marsh.svg" symbol-height="64" />
 			</rule>
 		</rule>
-		<rule e="way" k="natural" v="rock" closed="yes" zoom-min="14">
+		<!-- roche -->
+		<rule e="way" k="natural" v="rock" closed="yes" zoom-min="12">
+			<area fill="#D3D3D3"/>
 			<rule e="any" k="*" v="*" zoom-max="14">
-				<area src="file:ele-res/p_rock.svg" symbol-height="16" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
-
 				<area src="file:ele-res/p_rock.svg" symbol-height="32" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-min="17">
+			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="15">
+				<area src="file:ele-res/p_rock.svg" symbol-height="48" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="16" zoom-max="16">
 				<area src="file:ele-res/p_rock.svg" symbol-height="64" />
 			</rule>
+			<rule e="any" k="*" v="*" zoom-min="17">
+				<area src="file:ele-res/p_rock.svg" symbol-height="96" />
+			</rule>
 		</rule>
-		<rule e="way" k="natural" v="heath" closed="yes" zoom-min="14">
+		<rule e="way" k="natural" v="heath" closed="yes" zoom-min="12">
 			<rule e="any" k="*" v="*" zoom-max="14">
 				<area src="file:ele-res/p_heath.svg" symbol-height="16" />
 			</rule>
@@ -1022,37 +1037,49 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<area src="file:ele-res/p_heath.svg" symbol-height="64" />
 			</rule>
 		</rule>
-		<rule e="way" k="natural" v="scrub" closed="yes" zoom-min="14">
-			<rule e="any" k="*" v="*" zoom-max="14">
+		<!-- brousaille -->
+		<rule e="way" k="natural" v="scrub" closed="yes" zoom-min="12">
+			<area fill="#E1EDD5"/>
+			<rule e="any" k="*" v="*" zoom-max="15">
 				<area src="file:ele-res/p_scrub.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
+			<rule e="any" k="*" v="*" zoom-min="16" zoom-max="16">
 				<area src="file:ele-res/p_scrub.svg" symbol-height="32" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="17">
 				<area src="file:ele-res/p_scrub.svg" symbol-height="64" />
 			</rule>
 		</rule>
-		<rule e="way" k="natural" v="fell" closed="yes" zoom-min="14">
+		<!-- prairie -->
+		<rule e="way" k="natural" v="fell|tundra" closed="yes" zoom-min="12">
+			<area fill="#EAF794"/>
 			<rule e="any" k="*" v="*" zoom-max="14">
-				<area src="file:ele-res/p_fell.svg" symbol-height="16" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
 				<area src="file:ele-res/p_fell.svg" symbol-height="32" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-min="17">
+			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="15">
+				<area src="file:ele-res/p_fell.svg" symbol-height="48" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="16" zoom-max="16">
 				<area src="file:ele-res/p_fell.svg" symbol-height="64" />
 			</rule>
-		</rule>
-		<rule e="way" k="natural" v="scree|shingle" closed="yes" zoom-min="14">
-			<rule e="any" k="*" v="*" zoom-max="14">
-				<area src="file:ele-res/p_scree.svg" symbol-height="16" />
+			<rule e="any" k="*" v="*" zoom-min="17">
+				<area src="file:ele-res/p_fell.svg" symbol-height="96" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
+		</rule>
+		<!-- éboulis|pierrier -->
+		<rule e="way" k="natural" v="scree|shingle" closed="yes" zoom-min="12">
+			<area fill="#568291"/>
+			<rule e="any" k="*" v="*" zoom-max="14">
 				<area src="file:ele-res/p_scree.svg" symbol-height="32" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-min="17">
+			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="15">
+				<area src="file:ele-res/p_scree.svg" symbol-height="48" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="16" zoom-max="16">
 				<area src="file:ele-res/p_scree.svg" symbol-height="64" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="17">
+				<area src="file:ele-res/p_scree.svg" symbol-height="96" />
 			</rule>
 		</rule>
 		<rule e="way" k="natural" closed="yes" v="glacier">
@@ -1073,45 +1100,47 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<area src="file:ele-res/p_glacier.svg" symbol-height="64" />
 			</rule>
 		</rule>
-		<rule e="way" k="landuse" v="quarry" closed="yes" zoom-min="14">
+		<rule e="way" k="landuse" v="quarry" closed="yes" zoom-min="12">
+			<area fill="#CCF2EFE4" />
 			<rule e="any" k="*" v="*" zoom-max="14">
-				<area src="file:ele-res/p_scree.svg" symbol-height="16" />
+				<area src="file:ele-res/p_quarry.svg" symbol-height="16" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
-				<area src="file:ele-res/p_scree.svg" symbol-height="32" />
+				<area src="file:ele-res/p_quarry.svg" symbol-height="32" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="17">
-				<area src="file:ele-res/p_scree.svg" symbol-height="64" />
+				<area src="file:ele-res/p_quarry.svg" symbol-height="64" />
 			</rule>
-			<area fill="#CCF2EFE4" />
 			<line stroke="#9EA199" stroke-width="0.2" />
 		</rule>
 		<rule e="way" k="natural" v="beach|sand|desert" closed="yes" zoom-min="12">
 			<area fill="#BBFAEBB9" />
 		</rule>
-		<rule e="way" k="landuse" v="orchard" closed="yes" zoom-min="14">
+		<rule e="way" k="landuse" v="orchard" closed="yes" zoom-min="12">
+			<area fill="#ECF3E1"/>
 			<rule e="any" k="*" v="*" zoom-max="14">
-				<area src="file:ele-res/p_orchard.svg" symbol-height="16" />
+				<area src="file:ele-res/p_orchard.svg" symbol-height="8" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
+				<area src="file:ele-res/p_orchard.svg" symbol-height="16" />
+				<line stroke="#E4E4E4" stroke-width="0.15" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="17">
 				<area src="file:ele-res/p_orchard.svg" symbol-height="32" />
 				<line stroke="#E4E4E4" stroke-width="0.15" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-min="17">
-				<area src="file:ele-res/p_orchard.svg" symbol-height="64" />
-				<line stroke="#E4E4E4" stroke-width="0.15" />
-			</rule>
 		</rule>
-		<rule e="way" k="landuse" v="vineyard" closed="yes" zoom-min="14">
+		<rule e="way" k="landuse" v="vineyard" closed="yes" zoom-min="12">
+			<area fill="#EFECF6"/>
 			<rule e="any" k="*" v="*" zoom-max="14">
-				<area src="file:ele-res/p_vineyard.svg" symbol-height="16" />
+				<area src="file:ele-res/p_vineyard.svg" symbol-height="8" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
-				<area src="file:ele-res/p_vineyard.svg" symbol-height="32" />
+				<area src="file:ele-res/p_vineyard.svg" symbol-height="16" />
 				<line stroke="#E4E4E4" stroke-width="0.15" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="17">
-				<area src="file:ele-res/p_vineyard.svg" symbol-height="64" />
+				<area src="file:ele-res/p_vineyard.svg" symbol-height="32" />
 				<line stroke="#E4E4E4" stroke-width="0.15" />
 			</rule>
 		</rule>
