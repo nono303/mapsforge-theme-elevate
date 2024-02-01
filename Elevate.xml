@@ -21,9 +21,9 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 
 -->
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#F8F8F8"
-    map-background-outside="#EEEEEE" version="5" xmlns="http://mapsforge.org/renderTheme"
-    xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd">
-    
+	map-background-outside="#EEEEEE" version="5" xmlns="http://mapsforge.org/renderTheme"
+	xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd">
+	
 <stylemenu id="elv-menu" defaultvalue="elv-hiking" defaultlang="en">
 
 	<!-- overlays special -->
@@ -1185,7 +1185,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
  
 		</rule>
 		<rule e="way" k="os_open_data" v="crags" closed="no" zoom-min="13">
-    			<line stroke="#D0D0D0" stroke-width="1" stroke-linecap="butt" />
+				<line stroke="#D0D0D0" stroke-width="1" stroke-linecap="butt" />
 		</rule>
 		<rule e="way" k="bridge" v="yes|viaduct|movable">
 			<rule e="way" k="landuse|natural" v="*">
@@ -4992,46 +4992,68 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				</rule>
 			</rule>
 		</rule>
-		<rule e="any" k="natural" v="saddle" zoom-min="14">
-			<rule e="any" k="dir_saddle" v="ds_0">
+		<rule e="any" k="natural" v="saddle" zoom-min="12">
+			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="12" zoom-max="12">
+				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_0.svg" symbol-height="10" />
+			</rule>
+			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="13" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_0.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_45|~">
+			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="12" zoom-max="12">
+				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_45.svg" symbol-height="10" />
+			</rule>
+			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="12" zoom-min="13" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_45.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_90">
+			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="12" zoom-max="12">
+				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_90.svg" symbol-height="10" />
+			</rule>
+			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="12" zoom-min="13" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_90.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_135">
+			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="12" zoom-max="12">
+				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_135.svg" symbol-height="10" />
+			</rule>
+			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="12" zoom-min="13" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_135.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-max="14" zoom-min="14">
-				<caption k="name" symbol-id="s_saddle" position="above" font-style="normal" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="15">
+			<rule e="any" k="*" v="*" zoom-min="14">
 				<caption k="name" symbol-id="s_saddle" position="above" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
-				<caption k="ele" priority="-5" symbol-id="s_saddle" position="below" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="13">
+				<caption k="ele" symbol-id="s_saddle" position="below" font-style="bold" font-size="8" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
-		<rule e="any" k="mountain_pass" v="yes" zoom-min="14">
-			<rule e="any" k="dir_saddle" v="ds_0">
+		<rule e="any" k="mountain_pass" v="yes" zoom-min="12">
+			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="12" zoom-max="12">
+				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_0.svg" symbol-height="10" />
+			</rule>
+			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="13" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_0.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_45|~">
+			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="12" zoom-max="12">
+				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_45.svg" symbol-height="10" />
+			</rule>
+			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="12" zoom-min="13" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_45.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_90">
+			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="12" zoom-max="12">
+				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_90.svg" symbol-height="10" />
+			</rule>
+			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="12" zoom-min="13" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_90.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_135">
+			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="12" zoom-max="12">
+				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_135.svg" symbol-height="10" />
+			</rule>
+			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="12" zoom-min="13" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_135.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-max="14" zoom-min="14">
-				<caption k="name" symbol-id="s_saddle" position="above" font-style="normal" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="15">
+			<rule e="any" k="*" v="*" zoom-min="14">
 				<caption k="name" symbol-id="s_saddle" position="above" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
-				<caption k="ele" priority="-5" symbol-id="s_saddle" position="below" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="13">
+				<caption k="ele" symbol-id="s_saddle" position="below" font-style="bold" font-size="8" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
 		<rule e="any" k="waterway|natural" v="rapids" zoom-min="15">
