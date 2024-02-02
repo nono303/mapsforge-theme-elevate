@@ -1068,7 +1068,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		</rule>
 		<!-- éboulis|pierrier -->
 		<rule e="way" k="natural" v="scree|shingle" closed="yes" zoom-min="12">
-			<area fill="#568291"/>
+			<area fill="#D4E5EB"/>
 			<rule e="any" k="*" v="*" zoom-max="14">
 				<area src="file:ele-res/p_scree.svg" symbol-height="32" />
 			</rule>
@@ -1082,6 +1082,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<area src="file:ele-res/p_scree.svg" symbol-height="96" />
 			</rule>
 		</rule>
+		<!-- glacier -->
 		<rule e="way" k="natural" closed="yes" v="glacier">
 			<rule e="any" k="*" v="*" zoom-max="13">
 				<line stroke="#88F7F7" stroke-width="0.8" />
