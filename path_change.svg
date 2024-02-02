@@ -1,0 +1,49 @@
+<svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    line {
+      stroke: black;
+    }
+    .small {
+      font: 18px sans-serif;
+    }
+  </style>
+  <text x="5" y="20" class="small">excellent good</text>
+  <line stroke-width="3" x1="0" y1="30" x2="480" y2="30" stroke-dasharray="" stroke-linecap="butt" />
+  
+  <text x="5" y="60" class="small">unknown</text>
+  <line stroke-width="3" x1="0" y1="70" x2="480" y2="70" stroke-dasharray="10 2 2 2" stroke-linecap="butt" />
+  
+  <text x="5" y="100" class="small">intermediate</text>
+  <line stroke-width="3" x1="0" y1="110" x2="480" y2="110" stroke-dasharray="10 6" stroke-linecap="butt" />
+
+  <text x="5" y="140" class="small">bad horrible</text>
+  <line stroke-width="3" x1="0" y1="150" x2="480" y2="150" stroke-dasharray="6 10" stroke-linecap="butt" />
+
+  <text x="5" y="180" class="small">no</text>
+  <line stroke-width="3" x1="0" y1="190" x2="480" y2="190" stroke-dasharray="1 7" stroke-linecap="round" />
+
+  <text x="5" y="220" class="small">T1 - hiking</text>
+  <line style="stroke:#FBC200" stroke-width="4" x1="0" y1="230" x2="480" y2="230"  />
+  
+  <text x="5" y="260" class="small">T2 - mountain_hiking</text>
+  <line style="stroke:#E20015" stroke-width="4" x1="0" y1="270" x2="480" y2="270"  />
+  <line style="stroke:#FFFFFF" stroke-width="2" x1="0" y1="270" x2="480" y2="270"  />
+  
+  <text x="5" y="300" class="small">T3 - demanding_mountain_hiking</text>
+  <line style="stroke:#E20015" stroke-width="4" x1="0" y1="310" x2="480" y2="310"  />
+  
+  <text x="5" y="340" class="small">T4 - alpine_hiking</text>
+  <line style="stroke:#0081C7" stroke-width="4" x1="0" y1="350" x2="480" y2="350"  />
+  <line style="stroke:#FFFFFF" stroke-width="2" x1="0" y1="350" x2="480" y2="350"  />
+  
+  <text x="5" y="380" class="small">T5 - demanding_alpine_hiking</text>
+  <line style="stroke:#0081C7" stroke-width="4" x1="0" y1="390" x2="480" y2="390"  />
+  
+  <text x="5" y="420" class="small">T6 - difficult_alpine_hiking</text>
+  <line style="stroke:#C700C7" stroke-width="4" x1="0" y1="430" x2="480" y2="430"  />
+
+  <text x="5" y="460" class="small">foot / cycle paths</text>
+  <line style="stroke:#00FF00" stroke-width="2"  x1="0" y1="470" x2="480" y2="470" stroke-dasharray="0,4" stroke-linecap="round" />
+
+  
+</svg>

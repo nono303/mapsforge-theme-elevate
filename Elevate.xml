@@ -762,6 +762,10 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<overlay id="elv-buildings-h" />
 		<overlay id="elv-borders-h" />
 		<overlay id="elv-background-h" />
+		<overlay id="elv-pt_network" />
+		<overlay id="elv-smallways" />
+		<overlay id="elv-c_routes" />
+		<overlay id="elv-c_s_routes" />	
 	</layer>
 	<layer id="elv-city" visible="true">
 		<name lang="de" value="Stadt" />
