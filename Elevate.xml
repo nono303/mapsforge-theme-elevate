@@ -5022,28 +5022,28 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			</rule>
 		</rule>
 		<rule e="any" k="natural" v="saddle" zoom-min="12">
-			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="12" zoom-max="12">
+			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="12" zoom-max="13">
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_0.svg" symbol-height="10" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="13" >
+			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="14" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_0.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="12" zoom-max="12">
+			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="12" zoom-max="13">
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_45.svg" symbol-height="10" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="13">
+			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="14">
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_45.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="12" zoom-max="12">
+			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="12" zoom-max="13">
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_90.svg" symbol-height="10" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="13" >
+			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="14" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_90.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="12" zoom-max="12">
+			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="12" zoom-max="13">
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_135.svg" symbol-height="10" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="13" >
+			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="14" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_135.svg" symbol-height="16" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="14">
@@ -5054,28 +5054,28 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			</rule>
 		</rule>
 		<rule e="any" k="mountain_pass" v="yes" zoom-min="12">
-			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="12" zoom-max="12">
+			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="12" zoom-max="13">
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_0.svg" symbol-height="10" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="13" >
+			<rule e="any" k="dir_saddle" v="ds_0" zoom-min="14" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_0.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="12" zoom-max="12">
+			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="12" zoom-max="13">
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_45.svg" symbol-height="10" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="13" >
+			<rule e="any" k="dir_saddle" v="ds_45|~" zoom-min="14" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_45.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="12" zoom-max="12">
+			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="12" zoom-max="13">
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_90.svg" symbol-height="10" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="13" >
+			<rule e="any" k="dir_saddle" v="ds_90" zoom-min="14" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_90.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="12" zoom-max="12">
+			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="12" zoom-max="13">
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_135.svg" symbol-height="10" />
 			</rule>
-			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="13" >
+			<rule e="any" k="dir_saddle" v="ds_135" zoom-min="14" >
 				<symbol id="s_saddle" display="always" src="file:ele-res/s_saddle_135.svg" symbol-height="16" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="14">
