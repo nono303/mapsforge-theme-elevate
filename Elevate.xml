@@ -4344,8 +4344,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					</rule>
 					<rule cat="bike" e="any" k="*" v="*">
 						<rule cat="acc_allowed" e="any" k="bicycle" v="bic_designated|bic_yes|bic_permissive">
-							<line stroke="#00FF00" stroke-width="0.5" stroke-dasharray="0,1.75,1.5,3.75" stroke-linecap="butt" />
-							<line stroke="#00FF00" stroke-width="0.15" stroke-dasharray="5,2" stroke-linecap="butt" />
+							<line scale="all" stroke="#00FF00" stroke-width="0.5" stroke-dasharray="0,4" stroke-linecap="round" />
 						</rule>
 					</rule>
 					<rule cat="mtb" e="any" k="*" v="*">
@@ -4392,8 +4391,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 							</rule>
 						</rule>
 						<rule cat="acc_allowed" e="any" k="foot" v="ft_yes|ft_permissive|ft_designated">
-							<line stroke="#00FF00" stroke-width="0.5" stroke-dasharray="0,1.75,1.5,3.75" stroke-linecap="butt" />
-							<line stroke="#00FF00" stroke-width="0.15" stroke-dasharray="5,2" stroke-linecap="butt" />
+							<line scale="all" stroke="#00FF00" stroke-width="0.5" stroke-dasharray="0,4" stroke-linecap="round" />
 						</rule>
 					</rule>
 				</rule>
