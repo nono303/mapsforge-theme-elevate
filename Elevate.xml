@@ -1700,14 +1700,17 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<line stroke="#70606060" dy="0.8" stroke-width="0.4" stroke-dasharray="2,2" stroke-linecap="butt" />
 			<caption k="name" font-style="italic" font-family="serif" font-size="12" fill="#888888" stroke="#888888" stroke-width="0.1" />
 		</rule>
+		
+		
+		
 		<rule e="way" k="natural" v="cliff">
 			<rule e="any" k="*" v="*" zoom-max="15" zoom-min="14">
 				<line stroke="#707070" stroke-width="0.5" stroke-linecap="butt" />
-				<lineSymbol src="file:ele-res/s_cliff.svg" dy="0.2" repeat="true" repeat-gap="30" repeat-start="0" display="always" priority="-20" symbol-height="12" />
+				<lineSymbol dy="0.2" src="file:ele-res/s_cliff.svg" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" position="center" symbol-percent="30"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="16">
 				<line stroke="#707070" stroke-width="0.3" stroke-linecap="butt" />
-				<lineSymbol src="file:ele-res/s_cliff.svg" dy="0.1" repeat="true" repeat-gap="50" repeat-start="0" display="always" priority="-20" symbol-height="20" />
+				<lineSymbol dy="0.2" src="file:ele-res/s_cliff.svg" repeat="true" repeat-gap="1" repeat-start="1" rotate="true" position="center" symbol-percent="50"/>
 			</rule>
 			<rule e="any" k="*" v="*" closed="no" zoom-min="14">
 				<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
@@ -1716,6 +1719,8 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<caption k="name" dy="2.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
+		
+		
 		<rule e="way" k="natural" v="ridge|arete" zoom-min="14">
 			<line stroke="#80606060" stroke-width="0.4" stroke-dasharray="6,8" stroke-linecap="round" />
 			<pathText k="name" dy="2" font-style="italic" font-family="serif" font-size="12" fill="#888888" stroke="#888888" stroke-width="0.1" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
