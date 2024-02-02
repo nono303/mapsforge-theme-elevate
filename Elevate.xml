@@ -1931,15 +1931,15 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 	<!-- administrative borders -->
 	<rule cat="borders" e="way" k="admin_level" v="2">
 		<rule e="any" k="*" v="*" zoom-max="8">
-			<line stroke="#666666" stroke-width="2.5" />
+			<line stroke="#995499" stroke-width="2.5" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="9" zoom-max="13">
-			<line stroke="#70909060" stroke-width="8" stroke-linecap="butt" />
-			<line stroke="#333333" stroke-width="0.7" />
+			<line stroke="#60995499" stroke-width="6" stroke-linecap="butt" />
+			<line stroke="#995499" stroke-width="0.7" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="14">
-			<line stroke="#70909060" stroke-width="8" stroke-linecap="butt" />
-			<line stroke="#FFFFBB" stroke-width="0.3" />
+			<line stroke="#60995499" stroke-width="4" stroke-linecap="butt" />
+			<line stroke="#995499" stroke-width="0.3" />
 			<line stroke="#444444" stroke-width="0.3" stroke-dasharray="15, 15" stroke-linecap="butt" />
 		</rule>
 	</rule>
