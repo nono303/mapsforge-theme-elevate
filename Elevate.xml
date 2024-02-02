@@ -5140,180 +5140,181 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 	<rule cat="landscapename" e="any" k="*" v="*">
 		<rule e="node" k="natural" v="volcano">
 			<rule cat="nocity" e="node" k="*" v="*">
-				<rule e="any" k="peak_dist" v="pd_1" zoom-max="13" zoom-min="9">
+				<rule e="any" k="peak_dist" v="pd_1" zoom-max="11" zoom-min="7">
 					<symbol id="s_volcano_small" priority="92" src="file:ele-res/s_volcano_small.svg" symbol-height="8" />
-					<rule e="any" k="*" v="*" zoom-max="12">
-						<caption k="name" priority="92" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-max="10">
+						<caption k="name" dy="4" priority="92" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="13">
-						<caption k="name" priority="92" symbol-id="s_volcano_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-						<caption k="ele" priority="-5" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-min="11">
+						<caption k="name" dy="4" priority="92" symbol-id="s_volcano_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+						<caption k="ele" dy="-4" priority="-5" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
 				</rule>
-				<rule e="any" k="peak_dist" v="pd_2" zoom-max="13" zoom-min="10">
+				<rule e="any" k="peak_dist" v="pd_2" zoom-max="11" zoom-min="8">
 					<symbol id="s_volcano_small" priority="91" src="file:ele-res/s_volcano_small.svg" symbol-height="8" />
-					<rule e="any" k="*" v="*" zoom-max="12">
-						<caption k="name" priority="91" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-max="10">
+						<caption k="name" dy="4" priority="91" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="13">
-						<caption k="name" priority="91" symbol-id="s_volcano_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-						<caption k="ele" priority="-6" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-min="11">
+						<caption k="name" dy="4" priority="91" symbol-id="s_volcano_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+						<caption k="ele" dy="-4" priority="-6" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
 				</rule>
-				<rule e="any" k="peak_dist" v="pd_3|~" zoom-max="13" zoom-min="11">
+				<rule e="any" k="peak_dist" v="pd_3|~" zoom-max="11" zoom-min="9">
 					<symbol id="s_volcano_small" priority="90" src="file:ele-res/s_volcano_small.svg" symbol-height="8" />
-					<rule e="any" k="*" v="*" zoom-max="12">
-						<caption k="name" priority="90" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-max="10">
+						<caption k="name" dy="4" priority="90" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="13">
-						<caption k="name" priority="90" symbol-id="s_volcano_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-						<caption k="ele" priority="-7" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-min="11">
+						<caption k="name" dy="4" priority="90" symbol-id="s_volcano_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+						<caption k="ele" dy="-4" priority="-7" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
 				</rule>
-				<rule e="any" k="peak_dist" v="pd_4" zoom-max="13" zoom-min="12">
+				<rule e="any" k="peak_dist" v="pd_4" zoom-max="11" zoom-min="10">
 					<symbol id="s_volcano_small" priority="89" src="file:ele-res/s_volcano_small.svg" symbol-height="8" />
-					<rule e="any" k="*" v="*" zoom-max="12">
-						<caption k="name" priority="89" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-max="10">
+						<caption k="name" dy="4" priority="89" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="13">
-						<caption k="name" priority="89" symbol-id="s_volcano_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-						<caption k="ele" priority="-8" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-min="11">
+						<caption k="name" dy="4" priority="89" symbol-id="s_volcano_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+						<caption k="ele" dy="-4" priority="-8" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
 				</rule>
-				<rule e="any" k="peak_dist" v="pd_5" zoom-max="13" zoom-min="13">
+				<rule e="any" k="peak_dist" v="pd_5" zoom-max="11" zoom-min="11">
 					<symbol id="s_volcano_small" priority="88" src="file:ele-res/s_volcano_small.svg" symbol-height="8" />
-					<caption k="name" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-					<caption k="ele" priority="-9" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<caption k="name" dy="4" symbol-id="s_volcano_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<caption k="ele" dy="-4" priority="-9" symbol-id="s_volcano_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 				</rule>
 			</rule>
-			<rule e="node" k="*" v="*" zoom-min="14">
+			<rule e="node" k="*" v="*" zoom-min="12">
 				<rule e="any" k="peak_dist" v="pd_1">
 					<symbol id="s_volcano" priority="92" src="file:ele-res/s_volcano.svg" symbol-height="12" />
-					<caption k="name" priority="92" symbol-id="s_volcano" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-5" symbol-id="s_volcano" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="92" symbol-id="s_volcano" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-5" symbol-id="s_volcano" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_2">
 					<symbol id="s_volcano" priority="91" src="file:ele-res/s_volcano.svg" symbol-height="12" />
-					<caption k="name" priority="91" symbol-id="s_volcano" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-5" symbol-id="s_volcano" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="91" symbol-id="s_volcano" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-5" symbol-id="s_volcano" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_3|~">
 					<symbol id="s_volcano" priority="90" src="file:ele-res/s_volcano.svg" symbol-height="12" />
-					<caption k="name" priority="90" symbol-id="s_volcano" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-5" symbol-id="s_volcano" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="90" symbol-id="s_volcano" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-5" symbol-id="s_volcano" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_4">
 					<symbol id="s_volcano" priority="89" src="file:ele-res/s_volcano.svg" symbol-height="12" />
-					<caption k="name" priority="89" symbol-id="s_volcano" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-5" symbol-id="s_volcano" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="89" symbol-id="s_volcano" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-5" symbol-id="s_volcano" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_5">
 					<symbol id="s_volcano" priority="88" src="file:ele-res/s_volcano.svg" symbol-height="12" />
-					<caption k="name" priority="88" symbol-id="s_volcano" position="above" font-style="normal" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-5" symbol-id="s_volcano" position="below" font-style="normal" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="88" symbol-id="s_volcano" position="above" font-style="normal" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-5" symbol-id="s_volcano" position="below" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 			</rule>
 		</rule>
+		<!-- sommets -->
 		<rule e="node" k="natural" v="peak">
 			<rule cat="nocity" e="node" k="*" v="*">
-				<rule e="any" k="peak_dist" v="pd_1" zoom-max="13" zoom-min="9">
+				<rule e="any" k="peak_dist" v="pd_1" zoom-max="11" zoom-min="7">
 					<symbol id="s_peak_small" priority="92" src="file:ele-res/s_peak_small.svg" symbol-height="8" />
-					<rule e="any" k="*" v="*" zoom-max="12">
-						<caption k="name" priority="92" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-max="10">
+						<caption k="name" dy="4" priority="92" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="13">
-						<caption k="name" priority="92" symbol-id="s_peak_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-						<caption k="ele" priority="-5" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-min="11">
+						<caption k="name" dy="4" priority="92" symbol-id="s_peak_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+						<caption k="ele" dy="-4" priority="-5" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
 				</rule>
-				<rule e="any" k="peak_dist" v="pd_2" zoom-max="13" zoom-min="10">
+				<rule e="any" k="peak_dist" v="pd_2" zoom-max="11" zoom-min="8">
 					<symbol id="s_peak_small" priority="91" src="file:ele-res/s_peak_small.svg" symbol-height="8" />
-					<rule e="any" k="*" v="*" zoom-max="12">
-						<caption k="name" priority="91" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-max="10">
+						<caption k="name" dy="4" priority="91" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="13">
-						<caption k="name" priority="91" symbol-id="s_peak_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-						<caption k="ele" priority="-6" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-min="11">
+						<caption k="name" dy="4" priority="91" symbol-id="s_peak_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+						<caption k="ele" dy="-4" priority="-6" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
 				</rule>
-				<rule e="any" k="peak_dist" v="pd_3|~" zoom-max="13" zoom-min="11">
+				<rule e="any" k="peak_dist" v="pd_3|~" zoom-max="11" zoom-min="9">
 					<symbol id="s_peak_small" priority="90" src="file:ele-res/s_peak_small.svg" symbol-height="8" />
-					<rule e="any" k="*" v="*" zoom-max="12">
-						<caption k="name" priority="90" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-max="10">
+						<caption k="name" dy="4" priority="90" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="13">
-						<caption k="name" priority="90" symbol-id="s_peak_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-						<caption k="ele" priority="-7" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-min="11">
+						<caption k="name" dy="4" priority="90" symbol-id="s_peak_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+						<caption k="ele" dy="-4" priority="-7" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
 				</rule>
-				<rule e="any" k="peak_dist" v="pd_4" zoom-max="13" zoom-min="12">
+				<rule e="any" k="peak_dist" v="pd_4" zoom-max="11" zoom-min="10">
 					<symbol id="s_peak_small" priority="89" src="file:ele-res/s_peak_small.svg" symbol-height="8" />
-					<rule e="any" k="*" v="*" zoom-max="12">
-						<caption k="name" priority="89" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-max="10">
+						<caption k="name" dy="4" priority="89" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="13">
-						<caption k="name" priority="89" symbol-id="s_peak_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-						<caption k="ele" priority="-8" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<rule e="any" k="*" v="*" zoom-min="11">
+						<caption k="name" dy="4" priority="89" symbol-id="s_peak_small" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+						<caption k="ele" dy="-4" priority="-8" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 					</rule>
 				</rule>
-				<rule e="any" k="peak_dist" v="pd_5" zoom-max="13" zoom-min="13">
+				<rule e="any" k="peak_dist" v="pd_5" zoom-max="11" zoom-min="11">
 					<symbol id="s_peak_small" priority="88" src="file:ele-res/s_peak_small.svg" symbol-height="8" />
-					<caption k="name" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
-					<caption k="ele" priority="-9" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<caption k="name" dy="4" symbol-id="s_peak_small" position="above" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
+					<caption k="ele" dy="-4" priority="-9" symbol-id="s_peak_small" position="below" font-style="normal" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.7" />
 				</rule>
 			</rule>
-			<rule e="node" k="summit:cross" v="yes" zoom-min="14">
+			<rule e="node" k="summit:cross" v="yes" zoom-min="12">
 				<rule e="any" k="peak_dist" v="pd_1">
 					<symbol id="s_peak_cross" priority="92" src="file:ele-res/s_peak_cross.svg" symbol-height="12" />
-					<caption k="name" priority="92" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-5" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="92" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-5" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_2">
 					<symbol id="s_peak_cross" priority="91" src="file:ele-res/s_peak_cross.svg" symbol-height="12" />
-					<caption k="name" priority="91" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-6" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="91" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-6" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_3|~">
 					<symbol id="s_peak_cross" priority="90" src="file:ele-res/s_peak_cross.svg" symbol-height="12" />
-					<caption k="name" priority="90" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-7" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="90" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-7" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_4">
 					<symbol id="s_peak_cross" priority="89" src="file:ele-res/s_peak_cross.svg" symbol-height="12" />
-					<caption k="name" priority="89" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-8" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="89" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-8" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_5">
 					<symbol id="s_peak_cross" priority="88" src="file:ele-res/s_peak_cross.svg" symbol-height="12" />
-					<caption k="name" priority="88" symbol-id="s_peak_cross" position="above" font-style="normal" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-9" symbol-id="s_peak_cross" position="below" font-style="normal" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="88" symbol-id="s_peak_cross" position="above" font-style="normal" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-9" symbol-id="s_peak_cross" position="below" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 			</rule>
-			<rule e="node" k="summit:cross" v="~" zoom-min="14">
+			<rule e="node" k="summit:cross" v="~" zoom-min="12">
 				<rule e="any" k="peak_dist" v="pd_1">
 					<symbol id="s_peak" priority="92" src="file:ele-res/s_peak.svg" symbol-height="12" />
-					<caption k="name" priority="92" symbol-id="s_peak" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-5" symbol-id="s_peak" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="92" symbol-id="s_peak" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-5" symbol-id="s_peak" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_2">
 					<symbol id="s_peak" priority="91" src="file:ele-res/s_peak.svg" symbol-height="12" />
-					<caption k="name" priority="91" symbol-id="s_peak" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-6" symbol-id="s_peak" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="91" symbol-id="s_peak" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-6" symbol-id="s_peak" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_3|~">
 					<symbol id="s_peak" priority="90" src="file:ele-res/s_peak.svg" symbol-height="12" />
-					<caption k="name" priority="90" symbol-id="s_peak" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-7" symbol-id="s_peak" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="90" symbol-id="s_peak" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-7" symbol-id="s_peak" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_4">
 					<symbol id="s_peak" priority="89" src="file:ele-res/s_peak.svg" symbol-height="12" />
-					<caption k="name" priority="89" symbol-id="s_peak" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-8" symbol-id="s_peak" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="89" symbol-id="s_peak" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-8" symbol-id="s_peak" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 				<rule e="any" k="peak_dist" v="pd_5">
 					<symbol id="s_peak" priority="88" src="file:ele-res/s_peak.svg" symbol-height="12" />
-					<caption k="name" priority="88" symbol-id="s_peak" position="above" font-style="normal" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
-					<caption k="ele" priority="-9" symbol-id="s_peak" position="below" font-style="normal" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="name" dy="4" priority="88" symbol-id="s_peak" position="above" font-style="normal" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
+					<caption k="ele" dy="-4" priority="-9" symbol-id="s_peak" position="below" font-style="normal" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 			</rule>
 		</rule>
