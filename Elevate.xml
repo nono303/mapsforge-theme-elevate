@@ -2866,7 +2866,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<circle radius="0.8" scale-radius="true" fill="#D9D0C7" />
 		</rule>
 	</rule>
-
+	
 <!-- highway cores -->
 	<rule e="way" k="area|based_on_rel" v="~|area_no">
 		<rule e="way" k="tunnel" v="~|no">
@@ -2898,7 +2898,178 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					</rule>
 				</rule>
 			</rule>
-	<!-- paths hiking -->
+			<!-- hiking-routes -->
+			<rule cat="h_routes" e="any" k="*" v="*">
+				<rule e="way" k="*" v="*" closed="no" zoom-min="14">
+					<rule e="way" k="highway" v="tertiary|secondary|primary|tertiary_link|secondary_link|primary_link|construction|road|unclassified|residential|living_street|ford|pedestrian|track|byway|service|cycleway">
+						<rule e="any" k="*" v="*" zoom-max="16">
+							<rule e="way" k="hknetwork" v="lwn|own">
+								<line stroke="#E0F0FF00" stroke-width="0.9" dy="-1" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="rwn">
+								<line stroke="#A000FF50" stroke-width="0.9" dy="-1" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="nwn">
+								<line stroke="#90FF4080" stroke-width="0.9" dy="-1" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="iwn">
+								<line stroke="#702060FF" stroke-width="0.9" dy="-1" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+						</rule>
+						<rule e="any" k="*" v="*" zoom-min="17">
+							<rule e="way" k="hknetwork" v="lwn|own">
+								<line stroke="#E0F0FF00" stroke-width="0.6" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="rwn">
+								<line stroke="#A000FF50" stroke-width="0.6" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="nwn">
+								<line stroke="#90FF4080" stroke-width="0.6" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="iwn">
+								<line stroke="#702060FF" stroke-width="0.6" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+						</rule>
+					</rule>
+					<rule e="way" k="highway" v="footway|path|steps|bridleway|via_ferrata">
+						<rule e="any" k="*" v="*" zoom-max="16">
+							<rule e="way" k="hknetwork" v="lwn|own">
+								<line stroke="#E0F0FF00" stroke-width="0.9" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="rwn">
+								<line stroke="#A000FF50" stroke-width="0.9" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="nwn">
+								<line stroke="#90FF4080" stroke-width="0.9" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="iwn">
+								<line stroke="#702060FF" stroke-width="0.9" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+						</rule>
+						<rule e="any" k="*" v="*" zoom-min="17">
+							<rule e="way" k="hknetwork" v="lwn|own">
+								<line stroke="#E0F0FF00" stroke-width="0.6" dy="-0.6" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="rwn">
+								<line stroke="#A000FF50" stroke-width="0.6" dy="-0.6" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="nwn">
+								<line stroke="#90FF4080" stroke-width="0.6" dy="-0.6" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="hknetwork" v="iwn">
+								<line stroke="#702060FF" stroke-width="0.6" dy="-0.6" stroke-linejoin="bevel" stroke-linecap="butt" />
+							</rule>
+						</rule>
+					</rule>
+				</rule>
+				<rule e="way" k="hknetwork" v="lwn|own" zoom-max="13" zoom-min="12">
+					<line stroke="#AAF0FF00" stroke-width="3" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="hknetwork" v="rwn" zoom-max="13" zoom-min="12">
+					<line stroke="#8700FF50" stroke-width="3" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="hknetwork" v="nwn" zoom-max="13" zoom-min="12">
+					<line stroke="#88FF4080" stroke-width="3" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="hknetwork" v="iwn" zoom-max="13" zoom-min="12">
+					<line stroke="#682060FF" stroke-width="3" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="hknetwork" v="nwn" zoom-max="11" zoom-min="10">
+					<line stroke="#BB0040" stroke-width="2.5" curve="cubic" />
+				</rule>
+				<rule e="way" k="hknetwork" v="iwn" zoom-max="11" zoom-min="10">
+					<line stroke="#0040FF" stroke-width="2.5" curve="cubic" />
+				</rule>
+				<rule e="way" k="hknetwork" v="nwn" zoom-max="9" zoom-min="8">
+					<line stroke="#BB0040" stroke-width="2" curve="cubic" />
+				</rule>
+				<rule e="way" k="hknetwork" v="iwn" zoom-max="9" zoom-min="7">
+					<line stroke="#0040FF" stroke-width="2" curve="cubic" />
+				</rule>
+
+				<!-- zoom 14+ overlays -->
+				<rule cat="h_s_routes" e="any" k="*" v="*">
+					<rule e="way" k="hknetwork" v="lwn|own" zoom-min="14">
+						<line stroke="#E0F0FF00" dy="0.8" stroke-width="0.6" stroke-linecap="butt" />
+						<line stroke="#90F0FF00" stroke-width="1.1" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="hknetwork" v="rwn" zoom-min="14">
+						<line stroke="#A000FF50" dy="0.8" stroke-width="0.6" stroke-linecap="butt" />
+						<line stroke="#7000FF50" stroke-width="1.1" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="hknetwork" v="nwn" zoom-min="14">
+						<line stroke="#90FF4080" dy="0.8" stroke-width="0.6" stroke-linecap="butt" />
+						<line stroke="#50FF4080" stroke-width="1.1" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="hknetwork" v="iwn" zoom-min="14">
+						<line stroke="#702060FF" dy="0.8" stroke-width="0.6" stroke-linecap="butt" />
+						<line stroke="#502060FF" stroke-width="1.1" stroke-linecap="butt" />
+					</rule>
+				</rule>
+
+				<!-- captions -->
+				<rule e="way" k="hknetwork" v="lwn|own">
+					<rule e="any" k="*" v="*" zoom-max="13" zoom-min="12">
+						<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#999900" stroke-width="2.5" repeat-start="30" repeat-gap="100" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="14">
+						<pathText display="always" priority="10" k="ref_hike" font-style="bold" font-size="9" fill="#FFFFFF" stroke="#999900" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300" />
+					</rule>
+				</rule>
+				<rule e="way" k="hknetwork" v="rwn">
+					<rule e="any" k="*" v="*" zoom-max="13" zoom-min="12">
+						<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#009900" stroke-width="2.5" repeat-start="30" repeat-gap="100" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="14">
+						<pathText priority="10" k="ref_hike" font-style="bold" font-size="9" fill="#FFFFFF" stroke="#009900" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300" />
+					</rule>
+				</rule>
+				<rule e="way" k="hknetwork" v="nwn">
+					<rule e="any" k="*" v="*" zoom-max="9" zoom-min="8">
+						<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#CC0048" stroke-width="4" repeat-start="0" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-max="11" zoom-min="10">
+						<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#CC0048" stroke-width="3.5" repeat-start="15" repeat-gap="80" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-max="13" zoom-min="12">
+						<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#CC0048" stroke-width="2.5" repeat-start="30" repeat-gap="100" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="14">
+						<pathText priority="10" k="ref_hike" font-style="bold" font-size="9" fill="#FFFFFF" stroke="#CC0048" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300" />
+					</rule>
+				</rule>
+				<rule e="way" k="hknetwork" v="iwn">
+					<rule e="any" k="*" v="*" zoom-max="9" zoom-min="7">
+						<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#0040FF" stroke-width="4" repeat-start="0" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-max="11" zoom-min="10">
+						<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#0040FF" stroke-width="3.5" repeat-start="15" repeat-gap="80" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-max="13" zoom-min="12">
+						<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#0040FF" stroke-width="2.5" repeat-start="30" repeat-gap="100" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="14">
+						<pathText priority="10" k="ref_hike" font-style="bold" font-size="9" fill="#FFFFFF" stroke="#0040FF" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300" />
+					</rule>
+				</rule>
+
+				<!-- hiking nodes -->
+				<rule e="node" k="hike_node" v="*">
+					<rule e="any" k="*" v="*" zoom-max="12" zoom-min="12">
+						<circle radius="6.4" scale-radius="false" fill="#ffffff" stroke="#009900" stroke-width="1.5" />
+						<caption k="addr:housenumber" display="always" priority="-14" font-style="bold" font-size="9" fill="#009900" stroke="#E5FFFFFF" stroke-width="2" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-max="14" zoom-min="13">
+						<circle radius="8.0" scale-radius="false" fill="#ffffff" stroke="#009900" stroke-width="2" />
+						<caption k="addr:housenumber" display="always" priority="-14" font-style="bold" font-size="10" fill="#009900" stroke="#E5FFFFFF" stroke-width="2" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="15">
+						<circle radius="10.4" scale-radius="false" fill="#ffffff" stroke="#009900" stroke-width="2" />
+						<caption k="addr:housenumber" display="always" priority="-14" font-style="bold" font-size="14" fill="#009900" stroke="#E5FFFFFF" stroke-width="2" />
+					</rule>
+				</rule>
+			</rule>
+			<!-- hiking paths -->
 			<rule cat="hike" e="any" k="*" v="*" zoom-min="13">
 				<!-- NO_SAC - trail_visibility excellent|good|~ -->
 				<rule e="way" k="trail_visibility" v="excellent|good|~">
@@ -3719,6 +3890,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					</rule>
 				</rule>
 			</rule>
+			<!-- via ferrata -->
 			<rule e="way" k="via_ferrata_flag" v="set" zoom-min="13">
 				<rule e="way" k="highway" v="via_ferrata|~">
 					<rule e="any" k="*" v="*" zoom-max="14">
@@ -3732,6 +3904,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<line stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="0,6,6,13" stroke-linecap="butt" />
 				<line stroke="#888888" stroke-width="1.4" stroke-dasharray="0,7,4,14" stroke-linecap="butt" />
 			</rule>
+			<!-- small ways -->
 			<rule cat="smallways" e="way" k="highway" v="track|byway">
 				<rule e="way" k="tracktype" v="grade1" zoom-max="13" zoom-min="12">
 					<line stroke="#FFFFFF" stroke-width="0.8" />
@@ -6809,179 +6982,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 	</rule>
 	<rule e="any" k="building" v="*" zoom-min="18">
 		<caption k="name" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>
-
-<!-- hiking-routes -->
-
-	<rule cat="h_routes" e="any" k="*" v="*">
-		<rule e="way" k="*" v="*" closed="no" zoom-min="14">
-			<rule e="way" k="highway" v="tertiary|secondary|primary|tertiary_link|secondary_link|primary_link|construction|road|unclassified|residential|living_street|ford|pedestrian|track|byway|service|cycleway">
-				<rule e="any" k="*" v="*" zoom-max="16">
-					<rule e="way" k="hknetwork" v="lwn|own">
-						<line stroke="#E0F0FF00" stroke-width="0.9" dy="-1" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="rwn">
-						<line stroke="#A000FF50" stroke-width="0.9" dy="-1" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="nwn">
-						<line stroke="#90FF4080" stroke-width="0.9" dy="-1" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="iwn">
-						<line stroke="#702060FF" stroke-width="0.9" dy="-1" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-				</rule>
-				<rule e="any" k="*" v="*" zoom-min="17">
-					<rule e="way" k="hknetwork" v="lwn|own">
-						<line stroke="#E0F0FF00" stroke-width="0.6" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="rwn">
-						<line stroke="#A000FF50" stroke-width="0.6" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="nwn">
-						<line stroke="#90FF4080" stroke-width="0.6" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="iwn">
-						<line stroke="#702060FF" stroke-width="0.6" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-				</rule>
-			</rule>
-			<rule e="way" k="highway" v="footway|path|steps|bridleway|via_ferrata">
-				<rule e="any" k="*" v="*" zoom-max="16">
-					<rule e="way" k="hknetwork" v="lwn|own">
-						<line stroke="#E0F0FF00" stroke-width="0.9" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="rwn">
-						<line stroke="#A000FF50" stroke-width="0.9" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="nwn">
-						<line stroke="#90FF4080" stroke-width="0.9" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="iwn">
-						<line stroke="#702060FF" stroke-width="0.9" dy="-0.8" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-				</rule>
-				<rule e="any" k="*" v="*" zoom-min="17">
-					<rule e="way" k="hknetwork" v="lwn|own">
-						<line stroke="#E0F0FF00" stroke-width="0.6" dy="-0.6" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="rwn">
-						<line stroke="#A000FF50" stroke-width="0.6" dy="-0.6" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="nwn">
-						<line stroke="#90FF4080" stroke-width="0.6" dy="-0.6" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="hknetwork" v="iwn">
-						<line stroke="#702060FF" stroke-width="0.6" dy="-0.6" stroke-linejoin="bevel" stroke-linecap="butt" />
-					</rule>
-				</rule>
-			</rule>
-		</rule>
-		<rule e="way" k="hknetwork" v="lwn|own" zoom-max="13" zoom-min="12">
-			<line stroke="#AAF0FF00" stroke-width="3" stroke-linecap="butt" />
-		</rule>
-		<rule e="way" k="hknetwork" v="rwn" zoom-max="13" zoom-min="12">
-			<line stroke="#8700FF50" stroke-width="3" stroke-linecap="butt" />
-		</rule>
-		<rule e="way" k="hknetwork" v="nwn" zoom-max="13" zoom-min="12">
-			<line stroke="#88FF4080" stroke-width="3" stroke-linecap="butt" />
-		</rule>
-		<rule e="way" k="hknetwork" v="iwn" zoom-max="13" zoom-min="12">
-			<line stroke="#682060FF" stroke-width="3" stroke-linecap="butt" />
-		</rule>
-		<rule e="way" k="hknetwork" v="nwn" zoom-max="11" zoom-min="10">
-			<line stroke="#BB0040" stroke-width="2.5" curve="cubic" />
-		</rule>
-		<rule e="way" k="hknetwork" v="iwn" zoom-max="11" zoom-min="10">
-			<line stroke="#0040FF" stroke-width="2.5" curve="cubic" />
-		</rule>
-		<rule e="way" k="hknetwork" v="nwn" zoom-max="9" zoom-min="8">
-			<line stroke="#BB0040" stroke-width="2" curve="cubic" />
-		</rule>
-		<rule e="way" k="hknetwork" v="iwn" zoom-max="9" zoom-min="7">
-			<line stroke="#0040FF" stroke-width="2" curve="cubic" />
-		</rule>
-
-		<!-- zoom 14+ overlays -->
-		<rule cat="h_s_routes" e="any" k="*" v="*">
-			<rule e="way" k="hknetwork" v="lwn|own" zoom-min="14">
-				<line stroke="#E0F0FF00" dy="0.8" stroke-width="0.6" stroke-linecap="butt" />
-				<line stroke="#90F0FF00" stroke-width="1.1" stroke-linecap="butt" />
-			</rule>
-			<rule e="way" k="hknetwork" v="rwn" zoom-min="14">
-				<line stroke="#A000FF50" dy="0.8" stroke-width="0.6" stroke-linecap="butt" />
-				<line stroke="#7000FF50" stroke-width="1.1" stroke-linecap="butt" />
-			</rule>
-			<rule e="way" k="hknetwork" v="nwn" zoom-min="14">
-				<line stroke="#90FF4080" dy="0.8" stroke-width="0.6" stroke-linecap="butt" />
-				<line stroke="#50FF4080" stroke-width="1.1" stroke-linecap="butt" />
-			</rule>
-			<rule e="way" k="hknetwork" v="iwn" zoom-min="14">
-				<line stroke="#702060FF" dy="0.8" stroke-width="0.6" stroke-linecap="butt" />
-				<line stroke="#502060FF" stroke-width="1.1" stroke-linecap="butt" />
-			</rule>
-		</rule>
-
-		<!-- captions -->
-		<rule e="way" k="hknetwork" v="lwn|own">
-			<rule e="any" k="*" v="*" zoom-max="13" zoom-min="12">
-				<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#999900" stroke-width="2.5" repeat-start="30" repeat-gap="100" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="14">
-				<pathText display="always" priority="10" k="ref_hike" font-style="bold" font-size="9" fill="#FFFFFF" stroke="#999900" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300" />
-			</rule>
-		</rule>
-		<rule e="way" k="hknetwork" v="rwn">
-			<rule e="any" k="*" v="*" zoom-max="13" zoom-min="12">
-				<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#009900" stroke-width="2.5" repeat-start="30" repeat-gap="100" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="14">
-				<pathText priority="10" k="ref_hike" font-style="bold" font-size="9" fill="#FFFFFF" stroke="#009900" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300" />
-			</rule>
-		</rule>
-		<rule e="way" k="hknetwork" v="nwn">
-			<rule e="any" k="*" v="*" zoom-max="9" zoom-min="8">
-				<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#CC0048" stroke-width="4" repeat-start="0" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-max="11" zoom-min="10">
-				<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#CC0048" stroke-width="3.5" repeat-start="15" repeat-gap="80" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-max="13" zoom-min="12">
-				<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#CC0048" stroke-width="2.5" repeat-start="30" repeat-gap="100" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="14">
-				<pathText priority="10" k="ref_hike" font-style="bold" font-size="9" fill="#FFFFFF" stroke="#CC0048" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300" />
-			</rule>
-		</rule>
-		<rule e="way" k="hknetwork" v="iwn">
-			<rule e="any" k="*" v="*" zoom-max="9" zoom-min="7">
-				<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#0040FF" stroke-width="4" repeat-start="0" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-max="11" zoom-min="10">
-				<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#0040FF" stroke-width="3.5" repeat-start="15" repeat-gap="80" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-max="13" zoom-min="12">
-				<pathText display="always" k="ref_hike" font-style="bold" font-size="8" fill="#FFFFFF" stroke="#0040FF" stroke-width="2.5" repeat-start="30" repeat-gap="100" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="14">
-				<pathText priority="10" k="ref_hike" font-style="bold" font-size="9" fill="#FFFFFF" stroke="#0040FF" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300" />
-			</rule>
-		</rule>
-
-		<!-- hiking nodes -->
-		<rule e="node" k="hike_node" v="*">
-			<rule e="any" k="*" v="*" zoom-max="12" zoom-min="12">
-				<circle radius="6.4" scale-radius="false" fill="#ffffff" stroke="#009900" stroke-width="1.5" />
-				<caption k="addr:housenumber" display="always" priority="-14" font-style="bold" font-size="9" fill="#009900" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-max="14" zoom-min="13">
-				<circle radius="8.0" scale-radius="false" fill="#ffffff" stroke="#009900" stroke-width="2" />
-				<caption k="addr:housenumber" display="always" priority="-14" font-style="bold" font-size="10" fill="#009900" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="15">
-				<circle radius="10.4" scale-radius="false" fill="#ffffff" stroke="#009900" stroke-width="2" />
-				<caption k="addr:housenumber" display="always" priority="-14" font-style="bold" font-size="14" fill="#009900" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>
 	</rule>
 
 <!-- cycling-routes -->
