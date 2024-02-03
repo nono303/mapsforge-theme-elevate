@@ -764,8 +764,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<overlay id="elv-background-h" />
 		<overlay id="elv-pt_network" />
 		<overlay id="elv-smallways" />
-		<overlay id="elv-c_routes" />
-		<overlay id="elv-c_s_routes" />	
 	</layer>
 	<layer id="elv-city" visible="true">
 		<name lang="de" value="Stadt" />
@@ -1228,7 +1226,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		</rule>
 	</rule>
 
-<hillshading zoom-min="9" zoom-max="17" />
+	<hillshading zoom-min="9" zoom-max="17" magnitude="128"/>
 
 <!-- tunnels -->
 	<rule e="way" k="tunnel" v="yes">
@@ -1704,9 +1702,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<line stroke="#70606060" dy="0.8" stroke-width="0.4" stroke-dasharray="2,2" stroke-linecap="butt" />
 			<caption k="name" font-style="italic" font-family="serif" font-size="12" fill="#888888" stroke="#888888" stroke-width="0.1"  />
 		</rule>
-
-
-
 		<rule e="way" k="natural" v="cliff">
 			<rule e="any" k="*" v="*" zoom-max="15" zoom-min="14">
 				<line stroke="#707070" stroke-width="0.5" stroke-linecap="butt" />
@@ -1723,8 +1718,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<caption k="name" dy="2.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
-
-
 		<rule e="way" k="natural" v="ridge|arete" zoom-min="14">
 			<line stroke="#80606060" stroke-width="0.4" stroke-dasharray="6,8" stroke-linecap="round" />
 			<pathText k="name" dy="2" font-style="italic" font-family="serif" font-size="12" fill="#888888" stroke="#888888" stroke-width="0.1"  display="always" priority="-20" repeat-start="50" repeat-gap="300" />
