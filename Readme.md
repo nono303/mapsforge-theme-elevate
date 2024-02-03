@@ -24,10 +24,9 @@
   > - lighten path overlay for foot & cycle shared  
   > - change overlay order (z-index) : hiking routes before hiking path  
   <a href="hiking_paths.svg"><img src="hiking_paths.svg" width="520"></a>
+### Example of changes 
+> _without hillshading, click to enlarge_
 
-### Example of changes _(without hillshading)_
-
-> click to enlarge
 <a href=".screenshots/z12.jpg"><img src=".screenshots/z12.jpg" width="640"></a>
 <a href=".screenshots/scree_rock.jpg"><img src=".screenshots/scree_rock.jpg" width="640"></a>
 <a href=".screenshots/route_cycle.jpg"><img src=".screenshots/route_cycle.jpg" width="640"></a>
