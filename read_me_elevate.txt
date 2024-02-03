@@ -568,11 +568,6 @@ License:
 ********
 
 This map style is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-For commercial usage it is licensed under a Attribution-NoDerivatives 4.0 International License: https://creativecommons.org/licenses/by-nd/4.0/
-
-This means you can use it in a commercial app etc. for free if you:
-- attribute the origin (for example: "uses Elevate map theme by Tobias Kühn, http://www.openandromaps.org/en/legend/elevate-mountain-hike-theme")
-- don't change anything or use parts of it, so you can only use it if you include the whole contents of the zip file
 
 For non-commercial usage you are free to reuse everything I made if you stick to those conditions:
 - attribute the origin (for example: "symbols/patterns/code based on Elevate theme by Tobias Kühn, http://www.openandromaps.org/en/legend/elevate-mountain-hike-theme")
