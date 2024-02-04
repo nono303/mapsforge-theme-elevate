@@ -1,0 +1,5 @@
+.gitattributes export-ignore
+.screenshots export-ignore
+Elements.xml export-ignore
+hiking_paths.svg export-ignore
+renderTheme.xsd export-ignore
