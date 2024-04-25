@@ -1329,12 +1329,12 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 
 <!-- contour lines -->
 	<rule cat="contour" e="any" k="contour_ext" v="*">
-		<rule e="way" k="*" v="*" zoom-max="9">
+		<rule e="way" k="*" v="*" zoom-min="9" zoom-max="10">
 			<rule e="way" k="contour_ext" v="elevation_major">
 				<line stroke="#8E8072" stroke-width="0.3" />
 			</rule>
 		</rule>
-		<rule e="way" k="*" v="*" zoom-min="10" zoom-max="12">
+		<rule e="way" k="*" v="*" zoom-min="11" zoom-max="12">
 			<rule e="way" k="contour_ext" v="elevation_medium">
 				<line stroke="#8E8072" stroke-width="0.2" />
 			</rule>
