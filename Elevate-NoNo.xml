@@ -1926,10 +1926,10 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 	</rule>
 
 <!-- non-physical boundaries -->
-	<!-- map border -->
+	<!-- map border>
 	<rule e="way" k="boundary" v="map_inner" zoom-max="13">
 		<line stroke="#308E8072" stroke-width="6" stroke-linecap="butt" />
-	</rule>
+	</rule-->
 	<!-- administrative borders -->
 	<rule cat="borders" e="way" k="admin_level" v="2">
 		<rule e="any" k="*" v="*" zoom-max="8">
