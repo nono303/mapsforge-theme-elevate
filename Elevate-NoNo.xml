@@ -3065,8 +3065,17 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<!-- hiking paths -->
 			<rule cat="hike" e="any" k="*" v="*" zoom-min="13">
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<pathText display="always" priority="99" font-family="sans_serif" font-style="normal" font-size="10" fill="#000000" stroke="#e9c707" stroke-width="3" repeat-start="0"  repeat-gap="300" k="sac_scale" />
-					<pathText display="always" priority="98" font-family="sans_serif" font-style="normal" font-size="10" fill="#FFFFFF" stroke="#267812" stroke-width="3" repeat-start="40" repeat-gap="300" k="trail_visibility"/>
+					<!--pathText display="always" priority="99" font-family="sans_serif" font-style="normal" font-size="10" fill="#000000" stroke="#e9c707" stroke-width="3" repeat-start="0"  repeat-gap="300" k="sac_scale" /-->
+					<rule e="way" k="trail_visibility" v="excellent|good">
+						<pathText display="always" priority="5" font-family="sans_serif" font-style="normal" font-size="10" fill="#FFFFFF" stroke="#267812" stroke-width="3" repeat-start="40" repeat-gap="200" k="trail_visibility"/>
+					</rule>
+					<rule e="way" k="trail_visibility" v="intermediate">
+						<pathText display="always" priority="5" font-family="sans_serif" font-style="normal" font-size="10" fill="#FFFFFF" stroke="#ff8a24" stroke-width="3" repeat-start="40" repeat-gap="200" k="trail_visibility"/>
+					</rule>
+					<rule e="way" k="trail_visibility" v="bad|horrible|no">
+						<pathText display="always" priority="5" font-family="sans_serif" font-style="normal" font-size="10" fill="#FFFFFF" stroke="#ff3333" stroke-width="3" repeat-start="40" repeat-gap="200" k="trail_visibility"/>
+					</rule>
+					
 				</rule>
 				<!-- NO_SAC -->
 				<rule e="way" k="sac_scale" v="~">
@@ -3109,7 +3118,10 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					<rule e="way" k="sac_scale" v="T5|demanding_alpine_hiking">
 						<line stroke="#245bff" stroke-width="0.65" stroke-linecap="butt" />
 					</rule>
-					<rule e="way" k="sac_scale" v="T6|difficult_alpine_hiking">
+					<rule e="way" k="sac_scale" v="T6|difficult_alpine_hiking" zoom-min="13" zoom-max="14">
+						<line stroke="#C700C7" stroke-width="0.65" stroke-dasharray="5,5" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="sac_scale" v="T6|difficult_alpine_hiking" zoom-min="15">
 						<line stroke="#C700C7" stroke-width="0.65" stroke-dasharray="10,10" stroke-linecap="butt" />
 					</rule>
 				</rule>
@@ -4201,8 +4213,15 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<rule cat="nocity" e="any" k="*" v="*" zoom-max="14" zoom-min="14">
 					<pathText priority="10" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="0" repeat-gap="200" />
 				</rule>
-				<rule e="any" k="*" v="*" zoom-min="15">
-					<pathText priority="10" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="10" repeat-gap="300" />
+				<!-- path name -->
+				<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
+					<pathText k="name" display="always" dy="2.8" priority="10" font-family="sans_serif" font-style="normal" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2.8" repeat-start="50" repeat-gap="250" />
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
+					<pathText k="name" display="always" dy="2.2" priority="10" font-family="sans_serif" font-style="normal" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2.8" repeat-start="50" repeat-gap="400" />
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="17">
+					<pathText k="name" display="always" dy="1.6" priority="10" font-family="sans_serif" font-style="normal" font-size="11" fill="#000000" stroke="#FFFFFF" stroke-width="2.8" repeat-start="50" repeat-gap="500" />
 				</rule>
 			</rule>
 			<rule e="way" k="highway" v="service|busway|construction|road|unclassified|residential|living_street">
