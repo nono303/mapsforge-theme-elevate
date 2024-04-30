@@ -6,7 +6,7 @@ Elevate theme family
 including Elevate & Elements
 
 Version:
-5.3.1
+5.4
 
 Mapsforge map style for OpenAndroMaps
 by Tobias Kuehn
@@ -884,16 +884,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<line stroke="#F8F8F8" stroke-width="1" />
 	</rule>
 
-<!-- underground pipelines -->
-	<rule cat="background" e="way" k="man_made" v="pipeline" zoom-min="14">
-		<rule e="way" k="tunnel|location" v="yes|underground">
-			<line stroke="#B8C8D9" stroke-width="0.6" stroke-linecap="butt" />
-			<line stroke="#DAECED" stroke-width="0.4" stroke-dasharray="7,1" stroke-linecap="butt" />
-			<line stroke="#88FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
-			<pathText k="name" font-style="bold" font-size="8" fill="#B09CA6BA" stroke="#B0FFFFFF" stroke-width="2" repeat-start="100" repeat-gap="300" />
-		</rule>
-	</rule>
-
 <!-- landcover -->
 	<rule cat="background" e="any" k="tunnel" v="~|no">
 		<rule e="way" k="bridge" v="yes|viaduct|movable">
@@ -1399,8 +1389,8 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 
 <!-- waterways -->
 	<rule cat="background-city" e="any" k="*" v="*">
-		<rule e="way" k="bridge" v="yes|viaduct|movable">
-			<rule e="way" k="tunnel" v="no|~">
+		<rule e="way" k="tunnel" v="no|~">
+			<rule e="way" k="bridge" v="yes|viaduct|movable">
 				<rule e="way" k="waterway" v="ditch|drain|stream" zoom-min="13">
 					<line stroke="#333333" stroke-width="1.6" stroke-linecap="butt" />
 					<line stroke="#EEEEEE" stroke-width="1.2" stroke-linecap="butt" />
@@ -1410,67 +1400,67 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					<line stroke="#EEEEEE" stroke-width="1.6" stroke-linecap="butt" />
 				</rule>
 			</rule>
-		</rule>
-		<rule e="way" k="waterway" v="ditch" zoom-min="13">
-			<line stroke="#B3DDFF" stroke-width="0.6" />
-		</rule>
-		<rule e="way" k="waterway" v="drain" zoom-min="13">
-			<line stroke="#A69D9D" stroke-width="0.7" stroke-linecap="butt" />
-			<line stroke="#B3DDFF" stroke-width="0.5" stroke-linecap="butt" />
-		</rule>
-		<rule e="way" k="waterway" v="canal" zoom-min="10">
-			<line stroke="#A69D9D" stroke-width="1.1" stroke-linecap="butt" />
-			<line stroke="#B3DDFF" stroke-width="0.9" stroke-linecap="butt" />
-		</rule>
-		<rule e="way" k="waterway" v="stream" zoom-min="13">
-			<line stroke="#B3DDFF" stroke-width="0.6" />
-		</rule>
-		<rule e="way" k="waterway" v="river" zoom-min="8">
-			<line stroke="#B3DDFF" stroke-width="1.1" />
-		</rule>
-		<rule e="way" k="waterway" v="riverbank" closed="yes">
-			<area fill="#B3DDFF" />
-			<line stroke="#B3DDFF" stroke-width="0.2" />
-		</rule>
-		<rule e="way" k="waterway" v="riverbank" closed="no">
-			<line stroke="#B3DDFF" stroke-width="1" />
-		</rule>
-		<rule e="way" k="natural" v="water" closed="yes">
-			<rule e="any" k="*" v="*" zoom-max="13">
+			<rule e="way" k="waterway" v="ditch" zoom-min="13">
+				<line stroke="#B3DDFF" stroke-width="0.6" />
+			</rule>
+			<rule e="way" k="waterway" v="drain" zoom-min="13">
+				<line stroke="#A69D9D" stroke-width="0.7" stroke-linecap="butt" />
+				<line stroke="#B3DDFF" stroke-width="0.5" stroke-linecap="butt" />
+			</rule>
+			<rule e="way" k="waterway" v="canal" zoom-min="10">
+				<line stroke="#A69D9D" stroke-width="1.1" stroke-linecap="butt" />
+				<line stroke="#B3DDFF" stroke-width="0.9" stroke-linecap="butt" />
+			</rule>
+			<rule e="way" k="waterway" v="stream" zoom-min="13">
+				<line stroke="#B3DDFF" stroke-width="0.6" />
+			</rule>
+			<rule e="way" k="waterway" v="river" zoom-min="8">
+				<line stroke="#B3DDFF" stroke-width="1.1" />
+			</rule>
+			<rule e="way" k="waterway" v="riverbank" closed="yes">
 				<area fill="#B3DDFF" />
 				<line stroke="#B3DDFF" stroke-width="0.2" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-min="14">
-				<area fill="#DDB3DDFF" />
-				<line stroke="#DDB3DDFF" stroke-width="0.2" />
+			<rule e="way" k="waterway" v="riverbank" closed="no">
+				<line stroke="#B3DDFF" stroke-width="1" />
 			</rule>
-		</rule>
-		<rule e="way" k="natural" v="water" closed="no">
-			<line stroke="#B3DDFF" stroke-width="1" />
-		</rule>
-		<rule e="way" k="landuse" v="reservoir|basin" closed="yes">
-			<line stroke="#A69D9D" stroke-width="0.3" />
-			<area fill="#B3DDFF" />
-		</rule>
-		<rule e="way" k="landuse" v="reservoir|basin" closed="no">
-			<line stroke="#A69D9D" stroke-width="1" />
-			<line stroke="#B3DDFF" stroke-width="0.2" />
-		</rule>
-		<rule e="way" k="intermittent|seasonal" v="wwi_yes|seas_yes" zoom-min="13">
-			<rule e="way" k="waterway" v="drain">
-				<line stroke="#66FFFFFF" stroke-width="0.5" stroke-dasharray="2,8" stroke-linecap="butt" />
+			<rule e="way" k="natural" v="water" closed="yes">
+				<rule e="any" k="*" v="*" zoom-max="13">
+					<area fill="#B3DDFF" />
+					<line stroke="#B3DDFF" stroke-width="0.2" />
+				</rule>
+				<rule e="any" k="*" v="*" zoom-min="14">
+					<area fill="#DDB3DDFF" />
+					<line stroke="#DDB3DDFF" stroke-width="0.2" />
+				</rule>
 			</rule>
-			<rule e="way" k="waterway" v="canal" zoom-min="10">
-				<line stroke="#66FFFFFF" stroke-width="0.9" stroke-dasharray="2,8" stroke-linecap="butt" />
+			<rule e="way" k="natural" v="water" closed="no">
+				<line stroke="#B3DDFF" stroke-width="1" />
 			</rule>
-			<rule e="way" k="waterway" v="stream|ditch" zoom-min="13">
-				<line stroke="#66FFFFFF" stroke-width="0.6" stroke-dasharray="2,8" stroke-linecap="butt" />
+			<rule e="way" k="landuse" v="reservoir|basin" closed="yes">
+				<line stroke="#A69D9D" stroke-width="0.3" />
+				<area fill="#B3DDFF" />
 			</rule>
-			<rule e="way" k="waterway" v="river" zoom-min="8">
-				<line stroke="#66FFFFFF" stroke-width="1.1" stroke-dasharray="2,8" stroke-linecap="butt" />
+			<rule e="way" k="landuse" v="reservoir|basin" closed="no">
+				<line stroke="#A69D9D" stroke-width="1" />
+				<line stroke="#B3DDFF" stroke-width="0.2" />
 			</rule>
-			<rule e="way" k="waterway|natural|landuse" v="riverbank|water|reservoir|basin" closed="yes">
-				<area src="file:ele-res/p_intermittent.svg" symbol-height="16" />
+			<rule e="way" k="intermittent|seasonal" v="wwi_yes|seas_yes" zoom-min="13">
+				<rule e="way" k="waterway" v="drain">
+					<line stroke="#66FFFFFF" stroke-width="0.5" stroke-dasharray="2,8" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="waterway" v="canal" zoom-min="10">
+					<line stroke="#66FFFFFF" stroke-width="0.9" stroke-dasharray="2,8" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="waterway" v="stream|ditch" zoom-min="13">
+					<line stroke="#66FFFFFF" stroke-width="0.6" stroke-dasharray="2,8" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="waterway" v="river" zoom-min="8">
+					<line stroke="#66FFFFFF" stroke-width="1.1" stroke-dasharray="2,8" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="waterway|natural|landuse" v="riverbank|water|reservoir|basin" closed="yes">
+					<area src="file:ele-res/p_intermittent.svg" symbol-height="16" />
+				</rule>
 			</rule>
 		</rule>
 	</rule>
@@ -1488,19 +1478,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<pathText k="name" font-style="bold" font-size="10" fill="#77A5FC" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
-		</rule>
-	</rule>
-
-	<!-- underground waterways -->
-	<rule cat="background" e="way" k="tunnel" v="yes" zoom-min="14">
-		<rule e="way" k="waterway" v="ditch|stream">
-			<line stroke="#90FFFFFF" stroke-width="0.4" stroke-dasharray="20,2" stroke-linecap="butt" />
-		</rule>
-		<rule e="way" k="waterway" v="drain">
-			<line stroke="#90FFFFFF" stroke-width="0.5" stroke-dasharray="20,2" stroke-linecap="butt" />
-		</rule>
-		<rule e="way" k="waterway" v="canal|river">
-			<line stroke="#90FFFFFF" stroke-width="0.9" stroke-dasharray="20,2" stroke-linecap="butt" />
 		</rule>
 	</rule>
 
@@ -1893,6 +1870,31 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		</rule>
 	</rule>
 
+<!-- underground pipelines -->
+	<rule cat="background" e="way" k="man_made" v="pipeline" zoom-min="14">
+		<rule e="way" k="tunnel|location" v="yes|underground">
+			<line stroke="#44B8C8D9" stroke-width="0.6" stroke-linecap="butt" />
+			<line stroke="#66DAECED" stroke-width="0.4" stroke-dasharray="7,1" stroke-linecap="butt" />
+			<line stroke="#88FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
+			<pathText k="name" font-style="bold" font-size="8" fill="#B09CA6BA" stroke="#B0FFFFFF" stroke-width="2" repeat-start="100" repeat-gap="300" />
+		</rule>
+	</rule>
+<!-- underground waterways -->
+	<rule cat="background" e="way" k="tunnel|location" v="yes|underground" zoom-min="14">
+		<rule e="way" k="waterway" v="ditch|stream">
+			<line stroke="#70FFFFFF" stroke-width="0.4" stroke-dasharray="20,2" stroke-linecap="butt" />
+			<line stroke="#307AA7CC" stroke-width="0.2" stroke-dasharray="20,2" stroke-linecap="butt" />
+		</rule>
+		<rule e="way" k="waterway" v="drain">
+			<line stroke="#70FFFFFF" stroke-width="0.5" stroke-dasharray="20,2" stroke-linecap="butt" />
+			<line stroke="#307AA7CC" stroke-width="0.3" stroke-dasharray="20,2" stroke-linecap="butt" />
+		</rule>
+		<rule e="way" k="waterway" v="canal|river">
+			<line stroke="#70FFFFFF" stroke-width="0.9" stroke-dasharray="20,2" stroke-linecap="butt" />
+			<line stroke="#307AA7CC" stroke-width="0.7" stroke-dasharray="20,2" stroke-linecap="butt" />
+		</rule>
+	</rule>
+
 <!-- non-physical boundaries -->
 	<!-- map border -->
 	<rule e="way" k="boundary" v="map_inner" zoom-max="13">
@@ -2225,7 +2227,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<area fill="#E6DFDF" />
 		</rule>
 		<rule e="way" k="man_made" v="pipeline" zoom-min="14">
-			<rule e="way" k="tunnel|location" v="~|no">
+			<rule e="way" k="tunnel|location" v="~|no|overground|overhead">
 				<line stroke="#B8C8D9" stroke-width="0.6" stroke-linecap="butt" />
 				<line stroke="#DAECED" stroke-width="0.4" stroke-dasharray="7,1" stroke-linecap="butt" />
 				<line stroke="#88FFFFFF" stroke-width="0.2" stroke-linecap="butt" />
@@ -2495,7 +2497,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<line stroke="#A000FF50" stroke-width="3.6" stroke-linecap="butt" />
 			</rule>
 			<rule cat="c_routes" e="way" k="network" v="ocn|lcn">
-				<line stroke="#C018E0F2" stroke-width="3.6" stroke-linecap="butt" />
+				<line stroke="#C012A5B3" stroke-width="3.6" stroke-linecap="butt" />
 			</rule>
 			<rule cat="c_routes" e="way" k="network" v="rcn">
 				<line stroke="#908000FF" stroke-width="3.6" stroke-linecap="butt" />
@@ -2515,7 +2517,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<line stroke="#A000FF50" stroke-width="2.65" stroke-linecap="butt" />
 			</rule>
 			<rule cat="c_routes" e="way" k="network" v="ocn|lcn">
-				<line stroke="#C018E0F2" stroke-width="2.65" stroke-linecap="butt" />
+				<line stroke="#C012A5B3" stroke-width="2.65" stroke-linecap="butt" />
 			</rule>
 			<rule cat="c_routes" e="way" k="network" v="rcn">
 				<line stroke="#908000FF" stroke-width="2.65" stroke-linecap="butt" />
@@ -2537,7 +2539,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<line stroke="#A0FFFFFF" stroke-width="1.6" stroke-linecap="butt" />
 			</rule>
 			<rule cat="c_routes" e="way" k="network" v="ocn|lcn">
-				<line stroke="#C018E0F2" stroke-width="2.4" stroke-linecap="butt" />
+				<line stroke="#C012A5B3" stroke-width="2.4" stroke-linecap="butt" />
 				<line stroke="#70FFFFFF" stroke-width="1.5" stroke-linecap="butt" />
 			</rule>
 			<rule cat="c_routes" e="way" k="network" v="rcn">
@@ -3815,11 +3817,11 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<line stroke="#FFFFFF" stroke-width="0.9" />
 				<line src="file:ele-res/p_pedestrian.svg" symbol-height="8" stroke-width="0.9" />
 			</rule>
-			<rule e="way" k="highway" v="living_street" zoom-min="12">
-				<line stroke="#E0E0E0" stroke-width="0.9" />
-			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|road|ford" zoom-min="12">
 				<line stroke="#FFFFFF" stroke-width="0.9" />
+			</rule>
+			<rule e="way" k="highway" v="living_street" zoom-min="12">
+				<line stroke="#E0E0E0" stroke-width="0.9" />
 			</rule>
 
 			<!-- high zoom cores major roads -->
@@ -3980,6 +3982,9 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					<line stroke="#D9D0C7" stroke-width="0.3" stroke-dasharray="20,20" stroke-linecap="butt" />
 				</rule>
 			</rule>
+			<rule cat="bike" e="way" k="cyclestreet|bicycle_road" v="yes" zoom-min="12">
+				<line stroke="#606080F0" stroke-width="0.9" />
+			</rule>
 			<rule e="way" k="highway|ford" v="ford|fd_yes" zoom-min="14">
 				<line stroke="#AAB3DDFF" stroke-width="0.65" />
 			</rule>
@@ -4078,45 +4083,52 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					<pathText priority="10" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="5" repeat-gap="200" />
 				</rule>
 				<rule e="any" k="*" v="*" zoom-min="15">
-					<pathText priority="10" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="5" repeat-gap="300" />
+					<pathText priority="10" k="name" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" dy="1" repeat-start="5" repeat-gap="300" repeat="false"  />
 				</rule>
 			</rule>
 			<rule e="way" k="highway" v="motorway" zoom-min="13">
-				<pathText priority="10" k="name" font-style="bold" font-size="9" fill="#215E8F" stroke="#E5FFFFFF" stroke-width="2" repeat-start="50" repeat-gap="500" />
+				<pathText k="name" font-style="bold" font-size="9" fill="#215E8F" stroke="#E5FFFFFF" stroke-width="2" repeat-start="10" repeat="false" />
 			</rule>
+
+			<!-- highway refs -->
 			<rule cat="car" e="any" k="highway" v="secondary|tertiary|tertiary_link|secondary_link" zoom-min="11">
-				<rule e="way" k="*" v="*" zoom-max="15" zoom-min="14">
-					<pathText k="ref" font-style="bold" font-size="8" stroke="#404040" fill="#FFFFFF" stroke-width="2" dy="-2.5" repeat-start="50" repeat-gap="500" />
+				<rule e="way" k="*" v="*" zoom-max="15" zoom-min="13">
+					<pathText k="ref" font-style="bold" font-size="8" stroke="#404040" fill="#FFFFFF" stroke-width="2" dy="-2" repeat-start="50" repeat-gap="500" repeat="false" />
 				</rule>
-				<rule e="way" k="name" v="~" zoom-min="16">
-					<pathText k="ref" font-style="bold" font-size="10" stroke="#404040" fill="#FFFFFF" stroke-width="2" dy="-2" repeat-start="80" repeat-gap="500" />
+				<rule e="way" k="*" v="*" zoom-min="16">
+					<pathText k="ref" font-style="bold" font-size="10" stroke="#404040" fill="#FFFFFF" stroke-width="2" dy="-1" repeat-start="100" repeat-gap="500" repeat="false" />
 				</rule>
 			</rule>
 			<rule cat="car" e="any" k="highway" v="trunk|primary|primary_link|trunk_link" zoom-min="9">
 				<rule e="way" k="*" v="*" zoom-max="14" zoom-min="13">
-					<pathText k="ref" font-style="bold" font-size="8" stroke="#404040" fill="#FFF580" stroke-width="2" dy="-3" repeat-start="80" repeat-gap="500" />
+					<pathText k="ref" font-style="bold" font-size="8" stroke="#404040" fill="#FFF580" stroke-width="2" dy="-3" repeat-start="10" repeat-gap="500" repeat="false" />
 				</rule>
-				<rule e="way" k="name" v="~" zoom-min="15">
-					<pathText k="ref" font-style="bold" font-size="10" stroke="#404040" fill="#FFF580" stroke-width="2" dy="-2" repeat-start="100" repeat-gap="500" />
+				<rule e="way" k="*" v="*" zoom-min="15">
+					<pathText k="ref" font-style="bold" font-size="10" stroke="#404040" fill="#FFF580" stroke-width="2" dy="-1" repeat-start="100" repeat-gap="500" repeat="false" />
 				</rule>
 			</rule>
 			<rule cat="car" e="any" k="highway" v="motorway" zoom-min="7">
-				<rule e="any" k="*" v="*" zoom-max="9">
-					<pathText k="ref" font-style="bold" font-size="8" stroke="#215E8F" fill="#FFFFFF" stroke-width="2" repeat-start="0" repeat-gap="200" />
+				<rule e="any" k="*" v="*" zoom-max="7">
+					<pathText k="ref" font-style="bold" font-size="8" stroke="#215E8F" fill="#FFFFFF" stroke-width="2" repeat-start="0" repeat-gap="10" repeat="false" />
 				</rule>
-				<rule e="any" k="*" v="*" zoom-max="12" zoom-min="10">
-					<pathText k="ref" font-style="bold" font-size="8" stroke="#215E8F" fill="#FFFFFF" stroke-width="2" repeat-start="40" repeat-gap="500" />
+				<rule e="any" k="*" v="*" zoom-max="9" zoom-min="8">
+					<pathText k="ref" font-style="bold" font-size="8" stroke="#215E8F" fill="#FFFFFF" stroke-width="2" repeat-start="0" repeat-gap="200" repeat="false" />
 				</rule>
-				<rule e="any" k="*" v="*" zoom-max="15" zoom-min="13">
-					<pathText k="ref" font-style="bold" font-size="9" stroke="#215E8F" fill="#FFFFFF" stroke-width="2" dy="-6" repeat-start="80" repeat-gap="500" />
+				<rule e="any" k="*" v="*" zoom-max="11" zoom-min="10">
+					<pathText k="ref" font-style="bold" font-size="8" stroke="#215E8F" fill="#FFFFFF" stroke-width="2" repeat-start="8" repeat-gap="500" repeat="false" />
 				</rule>
-				<rule e="any" k="*" v="*" zoom-min="16">
-					<pathText k="ref" font-style="bold" font-size="10" stroke="#215E8F" fill="#FFFFFF" stroke-width="3.2" dy="-6" repeat-start="200" repeat-gap="500" />
+				<rule e="any" k="*" v="*" zoom-max="13" zoom-min="12">
+					<pathText k="ref" font-style="bold" font-size="9" stroke="#215E8F" fill="#FFFFFF" stroke-width="2" dy="-6" repeat-start="50" repeat-gap="10000" repeat="false" />
+				</rule>
+				<rule e="any" k="*" v="*" zoom-min="14">
+					<pathText k="ref" font-style="bold" font-size="10" stroke="#215E8F" fill="#FFFFFF" stroke-width="3.2" dy="-6" repeat-start="100" repeat-gap="1000" repeat="false" />
 				</rule>
 			</rule>
 			<rule cat="other_refs" e="way" k="highway" v="road|unclassified|residential|living_street|ford|pedestrian|track|byway|service|busway|cycleway|footway|path|steps|bridleway|via_ferrata" zoom-min="14">
 				<pathText k="ref" font-style="bold" font-size="9" fill="#FFFFFF" stroke="#777777" stroke-width="2.5" dy="-2" repeat-start="50" repeat-gap="300" />
 			</rule>
+
+			<!-- access tags -->
 			<rule e="way" k="*" v="*" zoom-min="12">
 				<rule e="way" k="highway" v="trunk|trunk_link|primary|primary_link|secondary|secondary_link|tertiary|tertiary_link|unclassified|residential|living_street|road|ford|pedestrian" zoom-min="15">
 					<rule cat="bike" e="any" k="*" v="*">
@@ -5315,11 +5327,14 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="toilets" zoom-min="15">
-			<rule e="any" k="fee" v="~">
+			<rule e="any" k="*" v="*">
 				<symbol id="s_toilets" priority="75" src="file:ele-res/s_toilets.svg" symbol-height="16" />
 			</rule>
 			<rule e="any" k="fee" v="fee_yes">
-				<symbol id="s_toilets" priority="75" src="file:ele-res/s_toilets_fee.svg" symbol-height="16" />
+				<symbol id="s_toilets_fee" priority="76" src="file:ele-res/s_toilets_fee.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="access" v="destination">
+				<symbol id="s_toilets_customers" priority="76" src="file:ele-res/s_toilets_customers.svg" symbol-height="16" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="18">
 				<caption k="name" symbol-id="s_toilets" position="above" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
@@ -6866,7 +6881,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 	<rule cat="c_routes" e="any" k="*" v="*">
 		<!-- zoom 7-13 -->
 		<rule e="way" k="network" v="ocn|lcn" zoom-max="13" zoom-min="12">
-			<line stroke="#C018E0F2" stroke-width="3" stroke-linecap="butt" />
+			<line stroke="#C012A5B3" stroke-width="3" stroke-linecap="butt" />
 		</rule>
 		<rule e="way" k="network" v="rcn" zoom-max="13" zoom-min="12">
 			<line stroke="#908000FF" stroke-width="3" stroke-linecap="butt" />
@@ -6896,7 +6911,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<!-- zoom 14+ overlays -->
 		<rule cat="c_s_routes" e="any" k="*" v="*">
 			<rule e="way" k="network" v="ocn|lcn" zoom-min="14">
-				<line stroke="#7018E0F2" stroke-width="1.4" stroke-linecap="butt" />
+				<line stroke="#7012A5B3" stroke-width="1.4" stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="network" v="rcn" zoom-min="14">
 				<line stroke="#508000FF" stroke-width="1.4" stroke-linecap="butt" />
@@ -8111,5 +8126,4 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 
 		</rule>
 	</rule>
-
 </rendertheme>

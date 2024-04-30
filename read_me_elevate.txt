@@ -1,4 +1,4 @@
-5.3.1
+5.4
 
 Elevate themes read me:
 ***********************
@@ -60,6 +60,10 @@ Manuelle Installation (fortgeschritten):
 - Entpacke die Zip-Datei mit einem Android Datei Explorer in den durch die App festgelegten Kartenstil-Ordner.-------------------------------------------------------------------------
 CHANGELOG
 -------------------------------------------------------------------------
+
+5.4 04/04/24
+- added cyclestreet/bicycle_road for cycling/MTB mapstyle, separate rendering for customer toilets, location=overground/overhead for pipelines
+- changed color for local cycling routes, rendering for underground pipelines/waterways, rendering of highway refs
 
 5.3.1 27/09/23
 - optimized rendering of missing trail_visibilty on paths with sac_scale
