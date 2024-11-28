@@ -1,12 +1,15 @@
 # RenderTheme for Mapsforge   
-## Based on [Elevate 5.3.1](https://github.com/nono303/mapsforge-theme-elevate) / Inspired from [active_RT5](https://github.com/FrankSchoeneck/active_RT5)  
-### version [nono-rc2](https://github.com/nono303/mapsforge-theme-elevate/tree/nono-rc2) - 2024-02-03  
+####  	*based on [Elevate](https://www.openandromaps.org/en/oam-forums/topic/elevate-updates-and-test-versions-news) & inspired by [Active_RT5](https://github.com/FrankSchoeneck/active_RT5)*  
+
+### changes from [original Elevate](https://github.com/nono303/mapsforge-theme-elevate)  
 - **improve saddle / pass visibility**   
+  
   > - zoom-min: 14 > 12   
   > - ele: zoom-min=13   
   > - name: zoom-min=14   
   > - symbol-height=10: zoom=12-13  
 - **improve terrain visibility / differentiation**  
+
   > - patterns & color: rock, scree, vineyard, orchard, quarry, fell, scrub, forest meadow   
   > - zoom-min: 13~14 > 12   
 - **better & sooner displaying of peak & volcano**  
