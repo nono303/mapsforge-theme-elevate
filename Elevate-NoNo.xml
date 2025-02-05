@@ -1216,7 +1216,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		</rule>
 	</rule>
 
-	<hillshading zoom-min="8" zoom-max="18" magnitude="64"/>
+	<hillshading zoom-min="2" zoom-max="20" magnitude="64"/>
 
 <!-- tunnels -->
 	<rule e="way" k="tunnel" v="yes">
