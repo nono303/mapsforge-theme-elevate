@@ -1,4 +1,4 @@
-5.5
+5.6
 
 Elevate themes read me:
 ***********************
@@ -60,6 +60,10 @@ Manuelle Installation (fortgeschritten):
 - Entpacke die Zip-Datei mit einem Android Datei Explorer in den durch die App festgelegten Kartenstil-Ordner.-------------------------------------------------------------------------
 CHANGELOG
 -------------------------------------------------------------------------
+
+5.6 02/06/25
+- added military/police=checkpoint, tower=watchtower, barrier_cross_hw: show barrier nodes in cycling which aren't on highways at higher ZL only
+- changed highway=raceway, leisure=sports_centre, leisure=stadium, sport=shooting
 
 5.5 17/11/24
 - added highway=passing_place, amenity=lounger, added ebike_charging_commercial/ebike_charging_station/ebike_charging_public/ebike_charging_customer, barrier=cattle_grid, highway=ladder
@@ -596,7 +600,7 @@ For automatic updates you can check the current version number here: https://www
 Symbols and patterns licenses:
 ******************************
 
-- all patterns, symbols for cliff, geyser, ladder, oneways, peaks, railway_crossings, ridge, rungs, safety_rope, via ferrata, volcano, waterfall, wilderness hut, goods_lift, drag_lift, bridge_movable, turnstile, hot spring, public transport, cities, apartment, beach_resort, water_park, swimming_area, bunkers, windpump, watermill, log, climbing_adventure, water_works, wastewater_plant and modifications/adaptions of other symbols by Tobias Kuehn - CC BY NC SA 4.0 license (commercial usage: CC BY ND 4.0 license)
+- all patterns, symbols for cliff, geyser, ladder, lounger, oneways, peaks, railway_crossings, ridge, rungs, safety_rope, via ferrata, volcano, waterfall, wilderness hut, goods_lift, drag_lift, bridge_movable, turnstile, hot spring, public transport, cities, apartment, beach_resort, water_park, swimming_area, bunkers, windpump, watermill, log, climbing_adventure, water_works, wastewater_plant and modifications/adaptions of other symbols by Tobias Kuehn - CC BY NC SA 4.0 license (commercial usage: CC BY ND 4.0 license)
 - most symbols: http://www.sjjb.co.uk/mapicons - CC-0 license
 - waymark symbols based on: Locus internal theme, Apache License and LocusUser#1 (Frank Schöneck)
 - rapids and chemist symbols are adaptions of original symbols from: http://mapicons.nicolasmollet.com - CC BY SA 3.0 license
@@ -607,5 +611,7 @@ Symbols and patterns licenses:
 - defibrillator, water_well, free_flying, farm_shop: http://osm-icons.org - CC BY SA 2.0 license by Msemm
 - hunting_stand, townhall, ice_cream, charging_station: https://gitlab.com/gmgeo/osmic - CC-0 by Michael Glanznig
 - artwork, petroleum well: https://github.com/gravitystorm/openstreetmap-carto - CC-0 by Tomasz Wójcik
+- checkpoint with police symbol by: https://github.com/gmgeo/osmic - CC-0 by Nebulon42
 - elevator, roller_skating, skateboard, dollar coin: https://www.svgrepo.com/ - CC-0 by SVG Repo
-- cliff_diving - CC_0 by Werner Huth
+- cliff_diving - CC_0 by Werner Huth
+

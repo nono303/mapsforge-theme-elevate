@@ -6,7 +6,7 @@ Elevate theme family
 including Elevate & Elements
 
 Version:
-5.5
+5.6
 
 Mapsforge map style for OpenAndroMaps
 by Tobias Kuehn
@@ -924,6 +924,12 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<area fill="#BBC7F1A3" />
 			<line stroke="#6FC18E" stroke-width="0.15" />
 		</rule>
+		<rule e="way" k="leisure|sport" v="sports_centre|shooting|stadium" closed="yes" zoom-min="14">
+			<rule e="way" k="building" v="~">
+				<area fill="#DDD3EBD9" />
+				<line stroke="#6FC18E" stroke-width="0.2" />
+			</rule>
+		</rule>
 		<rule cat="borders" e="way" k="tourism" v="camp_site" closed="yes">
 		 	<rule e="any" k="*" v="*" zoom-max="15" zoom-min="14">
 				<area src="file:ele-res/p_camp_site.svg" symbol-height="32" />
@@ -1503,10 +1509,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<line stroke="#E9DD72" stroke-width="0.2" />
 			</rule>
 		</rule>
-		<rule e="way" k="leisure|sport" v="sports_centre|shooting|stadium" zoom-min="14">
-			<area fill="#DDD3EBD9" />
-			<line stroke="#6FC18E" stroke-width="0.2" />
-		</rule>
 		<rule e="way" k="leisure" v="playground|pitch|dog_park" zoom-min="14">
 			<area fill="#D3EBD9" />
 			<line stroke="#6FC13D" stroke-width="0.2" />
@@ -1756,15 +1758,17 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<line stroke="#F2A07B" stroke-width="1.2" />
 			</rule>
 		</rule>
-		<rule e="way" k="highway" v="raceway" closed="yes" zoom-min="14">
-			<line stroke="#FFFFFF" stroke-width="0.4" />
-			<line stroke="#DD0000" stroke-width="0.4" stroke-linecap="butt" stroke-dasharray="10,10" />
-			<area fill="#CCCCCC" />
-		</rule>
-		<rule e="way" k="highway" v="raceway" closed="no" zoom-min="14">
-			<line stroke="#FFFFFF" stroke-width="1.4" />
-			<line stroke="#DD0000" stroke-width="1.4" stroke-linecap="butt" stroke-dasharray="10,10" />
-			<line stroke="#CCCCCC" stroke-width="1" />
+		<rule e="way" k="highway" v="raceway" zoom-min="14">
+			<rule e="any" k="area|based_on_rel" v="yes|mp">
+				<line stroke="#FFFFFF" stroke-width="0.4" />
+				<line stroke="#DD0000" stroke-width="0.4" stroke-linecap="butt" stroke-dasharray="10,10" />
+				<area fill="#CCCCCC" />
+			</rule>
+			<rule e="any" k="area|based_on_rel" v="~" >
+				<line stroke="#FFFFFF" stroke-width="1.4" />
+				<line stroke="#DD0000" stroke-width="1.4" stroke-linecap="butt" stroke-dasharray="10,10" />
+				<line stroke="#CCCCCC" stroke-width="1" />
+			</rule>
 		</rule>
 		<rule e="way" k="leisure" v="swimming_pool" zoom-min="14">
 			<area fill="#B3DDFF" />
@@ -2311,6 +2315,9 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<rule e="way" k="historic" v="ruins">
 				<line stroke="#734A08" stroke-width="0.1" />
 				<line stroke="#C0F8F8F8" stroke-width="0.1" stroke-dasharray="5,5" />
+			</rule>
+			<rule e="way" k="leisure|sport" v="sports_centre|shooting|stadium" zoom-min="14">
+				<line stroke="#6FC18E" stroke-width="0.1" />
 			</rule>
 		</rule>
 		<rule e="way" k="aeroway" v="terminal" zoom-min="14">
@@ -5473,7 +5480,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 	</rule>
 
 	<!-- barriers -->
-	<rule cat="barriers" e="any" k="*" v="*" zoom-min="9">
+	<rule cat="barriers" e="any" k="*" v="*" zoom-min="8">
 		<rule e="any" k="safety_rope" v="sr_yes" zoom-min="15">
 			<symbol priority="84" src="file:ele-res/s_safety_rope.svg" symbol-height="16" />
 		</rule>
@@ -5493,16 +5500,32 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<caption k="name" symbol-id="s_border_control" position="above" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
+		<rule e="any" k="military|police" v="checkpoint" zoom-min="8">
+			<symbol id="s_checkpoint" priority="72" src="file:ele-res/s_checkpoint.svg" symbol-height="16" />
+			<rule e="any" k="*" v="*" zoom-min="18">
+				<caption k="name" symbol-id="s_checkpoint" position="above" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
 		<rule e="any" k="barrier" v="toll_booth" zoom-min="14">
 			<symbol id="s_toll_booth" priority="72" src="file:ele-res/s_toll_booth.svg" symbol-height="16" />
 			<rule e="any" k="*" v="*" zoom-min="18">
 				<caption k="name" symbol-id="s_toll_booth" position="above" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
+		<!-- barriers highway only nodes + ways -->
 		<rule cat="bike" e="any" k="barrier" v="*">
 			<rule e="any" k="barrier" v="cattle_grid" zoom-min="16">
 				<symbol priority="73" src="file:ele-res/s_cattle_grid.svg" symbol-height="16" />
 			</rule>
+			<rule e="any" k="barrier" v="bollard" zoom-min="16">
+				<symbol priority="70" src="file:ele-res/s_bollard.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="barrier" v="cycle_barrier" zoom-min="16">
+				<symbol priority="71" src="file:ele-res/s_cycle_barrier.svg" symbol-height="16" />
+			</rule>
+		</rule>
+		<!-- barriers highway only nodes -->
+		<rule cat="bike" e="node" k="barrier_cross_hw" v="bch_yes">
 			<rule e="any" k="barrier" v="lift_gate|chain" zoom-min="16">
 				<symbol priority="71" src="file:ele-res/s_lift_gate.svg" symbol-height="16" />
 			</rule>
@@ -5512,9 +5535,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<rule e="any" k="barrier" v="log" zoom-min="16">
 				<symbol priority="71" src="file:ele-res/s_log.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="barrier" v="cycle_barrier" zoom-min="16">
-				<symbol priority="71" src="file:ele-res/s_cycle_barrier.svg" symbol-height="16" />
-			</rule>
+
 			<rule e="any" k="barrier" v="gate" zoom-min="15">
 				<rule e="any" k="access|bicycle" v="private|acc_no|bic_no|forestry|bic_forestry">
 					<symbol priority="71" src="file:ele-res/s_gate_private.svg" symbol-height="16" />
@@ -5529,13 +5550,74 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<rule e="any" k="barrier" v="turnstile" zoom-min="16">
 				<symbol priority="71" src="file:ele-res/s_turnstile.svg" symbol-height="16" />
 			</rule>
-			<rule e="any" k="barrier" v="bollard" zoom-min="16">
-				<symbol priority="70" src="file:ele-res/s_bollard.svg" symbol-height="16" />
-			</rule>
+
 			<rule e="any" k="barrier" v="block" zoom-min="16">
 				<symbol priority="70" src="file:ele-res/s_block.svg" symbol-height="16" />
 			</rule>
 		</rule>
+		<!-- barriers non-highway nodes -->
+		<rule cat="bike" e="node" k="barrier_cross_hw" v="~">
+			<rule e="any" k="barrier" v="lift_gate|chain" zoom-min="18">
+				<symbol priority="71" src="file:ele-res/s_lift_gate.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="barrier" v="stile" zoom-min="18">
+				<symbol priority="71" src="file:ele-res/s_stile.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="barrier" v="log" zoom-min="18">
+				<symbol priority="71" src="file:ele-res/s_log.svg" symbol-height="16" />
+			</rule>
+
+			<rule e="any" k="barrier" v="gate" zoom-min="17">
+				<rule e="any" k="access|bicycle" v="private|acc_no|bic_no|forestry|bic_forestry">
+					<symbol priority="71" src="file:ele-res/s_gate_private.svg" symbol-height="16" />
+				</rule>
+			</rule>
+			<rule e="any" k="barrier" v="gate" zoom-min="18">
+				<symbol priority="70" src="file:ele-res/s_gate.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="barrier" v="kissing_gate" zoom-min="18">
+				<symbol priority="71" src="file:ele-res/s_kissing_gate.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="barrier" v="turnstile" zoom-min="18">
+				<symbol priority="71" src="file:ele-res/s_turnstile.svg" symbol-height="16" />
+			</rule>
+
+			<rule e="any" k="barrier" v="block" zoom-min="18">
+				<symbol priority="70" src="file:ele-res/s_block.svg" symbol-height="16" />
+			</rule>
+		</rule>
+		<!-- barriers highway + non-highway ways -->
+		<rule cat="bike" e="way" k="barrier" v="*">
+			<rule e="any" k="barrier" v="lift_gate|chain" zoom-min="16">
+				<symbol priority="71" src="file:ele-res/s_lift_gate.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="barrier" v="stile" zoom-min="16">
+				<symbol priority="71" src="file:ele-res/s_stile.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="barrier" v="log" zoom-min="16">
+				<symbol priority="71" src="file:ele-res/s_log.svg" symbol-height="16" />
+			</rule>
+
+			<rule e="any" k="barrier" v="gate" zoom-min="15">
+				<rule e="any" k="access|bicycle" v="private|acc_no|bic_no|forestry|bic_forestry">
+					<symbol priority="71" src="file:ele-res/s_gate_private.svg" symbol-height="16" />
+				</rule>
+			</rule>
+			<rule e="any" k="barrier" v="gate" zoom-min="16">
+				<symbol priority="70" src="file:ele-res/s_gate.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="barrier" v="kissing_gate" zoom-min="16">
+				<symbol priority="71" src="file:ele-res/s_kissing_gate.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="barrier" v="turnstile" zoom-min="16">
+				<symbol priority="71" src="file:ele-res/s_turnstile.svg" symbol-height="16" />
+			</rule>
+
+			<rule e="any" k="barrier" v="block" zoom-min="16">
+				<symbol priority="70" src="file:ele-res/s_block.svg" symbol-height="16" />
+			</rule>
+		</rule>
+
 		<rule cat="nobike" e="any" k="barrier" v="*" zoom-min="18">
 			<rule e="any" k="barrier" v="cattle_grid">
 				<symbol src="file:ele-res/s_cattle_grid.svg" symbol-height="16" />
@@ -6484,7 +6566,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 
 	<!-- special buildings -->
 	<rule cat="buildings" e="any" k="*" v="*" zoom-min="11">
-		<rule e="any" k="tower" v="observation" zoom-min="14">
+		<rule e="any" k="tower" v="observation|watchtower" zoom-min="14">
 			<symbol id="s_tower_observation" priority="63" src="file:ele-res/s_tower_observation.svg" symbol-height="16" />
 			<rule e="any" k="*" v="*" zoom-min="18">
 				<caption k="name" symbol-id="s_tower_observation" position="above" font-style="bold" font-size="10" fill="#256f25" stroke="#E5FFFFFF" stroke-width="2" />
