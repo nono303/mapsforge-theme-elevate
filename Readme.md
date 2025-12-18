@@ -14,7 +14,7 @@
   > - zoom-min: 13~14 > 12   
 - **better & sooner displaying of peak & volcano**  
 - **change color & reduce border#admin_level=2**  
-- **improve cliff**  
+- **improve cliff & elevation**
 - **change hillshading magnitude: 64 (default) > 128**  
 - **refactoring hiking trails**  
   > - sac_scale differentiated by color only _(disabled dash for T4|T5|T6, dash modes only represent trail_visibility)_  
