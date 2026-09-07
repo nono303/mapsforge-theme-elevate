@@ -6,7 +6,7 @@ Elevate theme family
 including Elevate & Elements
 
 Version:
-5.6
+5.7
 
 Mapsforge map style for OpenAndroMaps
 by Tobias Kuehn
@@ -71,13 +71,13 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<cat id="contour" />
 		<cat id="flat" />
 	</layer>
-	<layer id="elv-smallways" enabled="true">
-		<name lang="de" value="[W] Pfade + Wirtschaftswege" />
-		<name lang="en" value="[W] Paths + tracks" />
-		<name lang="es" value="[W] Senderos + caminos" />
-		<name lang="fr" value="[W] Sentiers + chemins forestiers" />
-		<name lang="it" value="[W] Sentieri + strade forestali" />
-		<cat id="smallways" />
+	<layer id="elv-sidewalks" enabled="true">
+		<name lang="de" value="[W] Gehsteige" />
+		<name lang="en" value="[W] Sidewalks" />
+		<name lang="es" value="[W] Aceras" />
+		<name lang="fr" value="[W] Trottoirs" />
+		<name lang="it" value="[W] Marciapiedi" />
+		<cat id="sidewalks" />
 	</layer>
 	<layer id="elv-c_routes" enabled="true">
 		<name lang="de" value="[R] Fahrradrouten" />
@@ -741,7 +741,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<cat id="nomtb" />
 		<cat id="contour" />
 		<cat id="mountains" />
-		<cat id="smallways" />
 		<overlay id="elv-h_routes" />
 		<overlay id="elv-h_s_routes" />
 		<overlay id="elv-waymarks" />
@@ -775,7 +774,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<cat id="nomtb" />
 		<cat id="background-city" />
 		<overlay id="elv-pt_network" />
-		<overlay id="elv-smallways" />
+		<overlay id="elv-sidewalks" />
 		<overlay id="elv-paved_emph-c" />
 		<overlay id="elv-settlements-c" />
 		<overlay id="elv-landscapefeat-c" />
@@ -808,7 +807,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<cat id="contour" />
 		<cat id="flat" />
 		<cat id="toll" />
-		<cat id="smallways" />
 		<overlay id="elv-c_routes" />
 		<overlay id="elv-c_s_routes" />
 		<overlay id="elv-cw_ext-b" />
@@ -844,7 +842,6 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<cat id="mountains" />
 		<cat id="toll" />
 		<cat id="mtb" />
-		<cat id="smallways" />
 		<overlay id="elv-mtbs_tracks" />
 		<overlay id="elv-mtb_routes" />
 		<overlay id="elv-mtb_c_routes" />
@@ -1190,7 +1187,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		</rule>
 	</rule>
 
-<hillshading zoom-min="9" zoom-max="17" />
+<hillshading cat="nocity" zoom-min="9" zoom-max="17" />
 
 <!-- tunnels -->
 	<rule e="way" k="tunnel" v="yes">
@@ -1201,15 +1198,26 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			<line stroke="#30000000" dy="-0.23" stroke-width="0.2" stroke-dasharray="16,3" stroke-linecap="butt" />
 			<line stroke="#80FFFFFF" dy="-0.23" stroke-width="0.2" stroke-dasharray="0,16,3,0" stroke-linecap="butt" />
 		</rule>
-		<rule cat="nohike" e="way" k="highway" v="steps|ladder|path|footway|bridleway" zoom-min="12">
-			<rule cat="smallways" e="any" k="*" v="*">
+		<rule cat="bike" e="way" k="highway" v="steps|ladder|path|footway|bridleway" zoom-min="12">
+			<line stroke="#30000000" dy="0.2" stroke-width="0.15" stroke-dasharray="16,3" stroke-linecap="butt" />
+			<line stroke="#80FFFFFF" dy="0.2" stroke-width="0.15" stroke-dasharray="0,16,3,0" stroke-linecap="butt" />
+			<line stroke="#30000000" dy="-0.2" stroke-width="0.15" stroke-dasharray="16,3" stroke-linecap="butt" />
+			<line stroke="#80FFFFFF" dy="-0.2" stroke-width="0.15" stroke-dasharray="0,16,3,0" stroke-linecap="butt" />
+		</rule>
+		<rule cat="city" e="way" k="highway" v="steps|ladder|path|footway|bridleway" zoom-min="12">
+			<rule e="any" k="footway" v="~">
 				<line stroke="#30000000" dy="0.2" stroke-width="0.15" stroke-dasharray="16,3" stroke-linecap="butt" />
 				<line stroke="#80FFFFFF" dy="0.2" stroke-width="0.15" stroke-dasharray="0,16,3,0" stroke-linecap="butt" />
 				<line stroke="#30000000" dy="-0.2" stroke-width="0.15" stroke-dasharray="16,3" stroke-linecap="butt" />
 				<line stroke="#80FFFFFF" dy="-0.2" stroke-width="0.15" stroke-dasharray="0,16,3,0" stroke-linecap="butt" />
 			</rule>
-		</rule>
-		<rule cat="smallways" e="way" k="highway" v="track|byway|cycleway" zoom-min="12">
+			<rule cat="sidewalks" e="any" k="footway" v="sidewalk">
+				<line stroke="#30000000" dy="0.2" stroke-width="0.15" stroke-dasharray="16,3" stroke-linecap="butt" />
+				<line stroke="#80FFFFFF" dy="0.2" stroke-width="0.15" stroke-dasharray="0,16,3,0" stroke-linecap="butt" />
+				<line stroke="#30000000" dy="-0.2" stroke-width="0.15" stroke-dasharray="16,3" stroke-linecap="butt" />
+				<line stroke="#80FFFFFF" dy="-0.2" stroke-width="0.15" stroke-dasharray="0,16,3,0" stroke-linecap="butt" />
+			</rule>
+		</rule>		<rule e="way" k="highway" v="track|byway|cycleway" zoom-min="12">
 			<line stroke="#30000000" dy="0.35" stroke-width="0.2" stroke-dasharray="16,3" stroke-linecap="butt" />
 			<line stroke="#80FFFFFF" dy="0.35" stroke-width="0.2" stroke-dasharray="0,16,3,0" stroke-linecap="butt" />
 			<line stroke="#30000000" dy="-0.35" stroke-width="0.2" stroke-dasharray="16,3" stroke-linecap="butt" />
@@ -1905,48 +1913,50 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<line stroke="#308E8072" stroke-width="6" stroke-linecap="butt" />
 	</rule>
 	<!-- administrative borders -->
-	<rule cat="borders" e="way" k="admin_level" v="2">
-		<rule e="any" k="*" v="*" zoom-max="8">
-			<line stroke="#666666" stroke-width="2.5" />
+	<rule cat="borders" e="way" k="building" v="~">
+		<rule e="way" k="admin_level" v="2">
+			<rule e="any" k="*" v="*" zoom-max="8">
+				<line stroke="#666666" stroke-width="2.5" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="9" zoom-max="13">
+				<line stroke="#70909060" stroke-width="8" stroke-linecap="butt" />
+				<line stroke="#333333" stroke-width="0.7" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="14">
+				<line stroke="#70909060" stroke-width="8" stroke-linecap="butt" />
+				<line stroke="#FFFFBB" stroke-width="0.3" />
+				<line stroke="#444444" stroke-width="0.3" stroke-dasharray="15, 15" stroke-linecap="butt" />
+			</rule>
 		</rule>
-		<rule e="any" k="*" v="*" zoom-min="9" zoom-max="13">
-			<line stroke="#70909060" stroke-width="8" stroke-linecap="butt" />
-			<line stroke="#333333" stroke-width="0.7" />
-		</rule>
-		<rule e="any" k="*" v="*" zoom-min="14">
-			<line stroke="#70909060" stroke-width="8" stroke-linecap="butt" />
-			<line stroke="#FFFFBB" stroke-width="0.3" />
-			<line stroke="#444444" stroke-width="0.3" stroke-dasharray="15, 15" stroke-linecap="butt" />
-		</rule>
-	</rule>
-	<rule cat="borders" e="way" k="admin_level" v="3">
-		<rule e="any" k="*" v="*" zoom-max="8" zoom-min="6">
-			<line stroke="#AAAAAA" stroke-width="1.5" />
-			<line stroke="#333333" stroke-width="1.5" stroke-dasharray="10, 10" stroke-linecap="butt" />
-		</rule>
-		<rule e="any" k="*" v="*" zoom-min="9" zoom-max="13">
-			<line stroke="#70909060" stroke-width="6" stroke-linecap="butt" />
-			<line stroke="#EEEEEE" stroke-width="0.7" />
-			<line stroke="#333333" stroke-width="0.7" stroke-dasharray="12, 12" stroke-linecap="butt" />
+		<rule cat="borders" e="way" k="admin_level" v="3">
+			<rule e="any" k="*" v="*" zoom-max="8" zoom-min="6">
+				<line stroke="#AAAAAA" stroke-width="1.5" />
+				<line stroke="#333333" stroke-width="1.5" stroke-dasharray="10, 10" stroke-linecap="butt" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="9" zoom-max="13">
+				<line stroke="#70909060" stroke-width="6" stroke-linecap="butt" />
+				<line stroke="#EEEEEE" stroke-width="0.7" />
+				<line stroke="#333333" stroke-width="0.7" stroke-dasharray="12, 12" stroke-linecap="butt" />
 
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="14">
+				<line stroke="#70909060" stroke-width="5" stroke-linecap="butt" />
+				<line stroke="#FFFFFF" stroke-width="0.2" />
+				<line stroke="#444444" stroke-width="0.2" stroke-dasharray="15, 15" stroke-linecap="butt" />
+			</rule>
 		</rule>
-		<rule e="any" k="*" v="*" zoom-min="14">
-			<line stroke="#70909060" stroke-width="5" stroke-linecap="butt" />
-			<line stroke="#FFFFFF" stroke-width="0.2" />
-			<line stroke="#444444" stroke-width="0.2" stroke-dasharray="15, 15" stroke-linecap="butt" />
-		</rule>
-	</rule>
-	<rule cat="borders" e="way" k="admin_level" v="4">
-		<rule e="any" k="*" v="*" zoom-max="8" zoom-min="6">
-			<line stroke="#666666" stroke-width="1.5" stroke-dasharray="8,5" stroke-linecap="butt" />
-		</rule>
-		<rule e="any" k="*" v="*" zoom-min="9" zoom-max="13">
-			<line stroke="#70909060" stroke-width="4" stroke-linecap="butt" />
-			<line stroke="#A0333333" stroke-width="0.7" stroke-dasharray="10,6" stroke-linecap="butt" />
-		</rule>
-		<rule e="any" k="*" v="*" zoom-min="14">
-			<line stroke="#70909060" stroke-width="3" stroke-linecap="butt" />
-			<line stroke="#C0444444" stroke-width="0.2" stroke-dasharray="10,6" stroke-linecap="butt" />
+		<rule cat="borders" e="way" k="admin_level" v="4">
+			<rule e="any" k="*" v="*" zoom-max="8" zoom-min="6">
+				<line stroke="#666666" stroke-width="1.5" stroke-dasharray="8,5" stroke-linecap="butt" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="9" zoom-max="13">
+				<line stroke="#70909060" stroke-width="4" stroke-linecap="butt" />
+				<line stroke="#A0333333" stroke-width="0.7" stroke-dasharray="10,6" stroke-linecap="butt" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="14">
+				<line stroke="#70909060" stroke-width="3" stroke-linecap="butt" />
+				<line stroke="#C0444444" stroke-width="0.2" stroke-dasharray="10,6" stroke-linecap="butt" />
+			</rule>
 		</rule>
 	</rule>
 	<!-- special areas -->
@@ -2364,21 +2374,19 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					<line stroke="#333333" stroke-width="1.35" stroke-linecap="butt" />
 					<line stroke="#F8F8F8" stroke-width="1.05" stroke-linecap="butt" />
 				</rule>
-				<rule cat="smallways" e="any" k="*" v="*">
-					<rule cat="nohike" e="way" k="highway" v="steps|ladder|path|footway|bridleway" zoom-min="13">
-						<line stroke="#333333" stroke-width="1.05" stroke-linecap="butt" />
-						<line stroke="#F8F8F8" stroke-width="0.7" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="highway" v="track|byway" zoom-min="13">
-						<line stroke="#333333" stroke-width="1.6" stroke-linecap="butt" />
-						<line stroke="#F8F8F8" stroke-width="1.2" stroke-linecap="butt" />
-					</rule>
-					<rule e="way" k="highway" v="cycleway" zoom-min="13">
-						<line stroke="#333333" stroke-width="1.45" stroke-linecap="butt" />
-						<line stroke="#F8F8F8" stroke-width="1.05" stroke-linecap="butt" />
-						<rule e="any" k="foot" v="ft_no|~">
-							<line stroke="#3366FF" stroke-width="0.8" stroke-linecap="butt" />
-						</rule>
+				<rule cat="nohike" e="way" k="highway" v="steps|ladder|path|footway|bridleway" zoom-min="13">
+					<line stroke="#333333" stroke-width="1.05" stroke-linecap="butt" />
+					<line stroke="#F8F8F8" stroke-width="0.7" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="highway" v="track|byway" zoom-min="13">
+					<line stroke="#333333" stroke-width="1.6" stroke-linecap="butt" />
+					<line stroke="#F8F8F8" stroke-width="1.2" stroke-linecap="butt" />
+				</rule>
+				<rule e="way" k="highway" v="cycleway" zoom-min="13">
+					<line stroke="#333333" stroke-width="1.45" stroke-linecap="butt" />
+					<line stroke="#F8F8F8" stroke-width="1.05" stroke-linecap="butt" />
+					<rule e="any" k="foot" v="ft_no|~">
+						<line stroke="#3366FF" stroke-width="0.8" stroke-linecap="butt" />
 					</rule>
 				</rule>
 				<rule e="way" k="highway" v="service|busway">
@@ -2435,7 +2443,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					<line stroke="#B3A18F" stroke-width="0.35" dy="-0.7" stroke-dasharray="1,8" stroke-linecap="butt" />
 					<line stroke="#B3A18F" stroke-width="0.15" dy="-0.9" stroke-linecap="butt" />
 				</rule>
-				<rule cat="smallways" e="any" k="*" v="*">
+				<rule e="any" k="*" v="*">
 					<rule cat="nohike" e="way" k="highway" v="steps|ladder|path|footway|bridleway" zoom-min="13">
 						<line stroke="#B3A18F" stroke-width="0.15" dy="0.7" stroke-linecap="butt" />
 						<line stroke="#B3A18F" stroke-width="0.35" dy="0.5" stroke-dasharray="1,8" stroke-linecap="butt" />
@@ -2736,7 +2744,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					<line stroke="#FFFFFF" stroke-width="0.95" stroke-linecap="butt" />
 				</rule>
 			</rule>
-			<rule cat="smallways" e="way" k="highway" v="track|byway">
+			<rule e="way" k="highway" v="track|byway">
 				<rule e="way" k="tracktype" v="grade1" zoom-max="12" zoom-min="12">
 					<line stroke="#925D3A" stroke-width="1.4" stroke-linecap="butt" />
 				</rule>
@@ -2750,7 +2758,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 					<line stroke="#925D3A" stroke-width="1.2" stroke-linecap="butt" />
 				</rule>
 			</rule>
-			<rule cat="smallways" e="way" k="highway" v="track|byway" zoom-min="14">
+			<rule e="way" k="highway" v="track|byway" zoom-min="14">
 				<rule cat="paved_emph" e="way" k="surface|tracktype" v="asphalt|paved|smooth_paved|grade1">
 					<rule cat="bike_only" e="any" k="*" v="*">
 						<line stroke="#3366FF" stroke-width="1.7" stroke-dasharray="5,5" stroke-linecap="butt" />
@@ -2779,7 +2787,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			</rule>
 			<rule e="way" k="bridge" v="~">
 				<rule cat="city" e="way" k="highway" v="cycleway" zoom-min="13">
-					<rule cat="smallways" e="any" k="foot" v="ft_no|~">
+					<rule e="any" k="foot" v="ft_no|~">
 						<line stroke="#3366FF" stroke-width="0.8" />
 					</rule>
 				</rule>
@@ -2853,10 +2861,10 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 	<rule e="way" k="area|based_on_rel" v="~|area_no">
 		<rule e="way" k="tunnel" v="~|no">
 			<rule cat="city" e="way" k="highway" v="bridleway">
-				<rule cat="smallways" e="any" k="*" v="*" zoom-max="15" zoom-min="13">
+				<rule e="any" k="*" v="*" zoom-max="15" zoom-min="13">
 					<line stroke="#AB7846" stroke-width="0.5" stroke-dasharray="0.5,4" stroke-linecap="round" />
 				</rule>
-				<rule cat="smallways" e="any" k="*" v="*" zoom-min="16">
+				<rule e="any" k="*" v="*" zoom-min="16">
 					<line stroke="#AB7846" stroke-width="0.55" stroke-dasharray="0.5,11" stroke-linecap="round" />
 				</rule>
 			</rule>
@@ -3185,17 +3193,29 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			</rule>
 			<!-- paths city -->
 			<rule cat="city" e="any" k="*" v="*" zoom-min="13">
-				<rule cat="smallways" e="way" k="highway" v="path|footway">
-					<rule cat="paved_emph" e="way" k="surface" v="asphalt|paved|smooth_paved">
-						<line stroke="#777777" stroke-width="1.2" stroke-linecap="butt" />
-						<line stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="butt" />
+				<rule e="way" k="highway" v="path|footway">
+					<rule e="way" k="footway" v="~">
+						<rule cat="paved_emph" e="way" k="surface" v="asphalt|paved|smooth_paved">
+							<line stroke="#777777" stroke-width="1.2" stroke-linecap="butt" />
+							<line stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="butt" />
+						</rule>
+						<line stroke="#777777" stroke-width="0.4" stroke-dasharray="10,1.5" stroke-linecap="butt" />
+						<rule e="way" k="bicycle" v="bic_yes|bic_permissive|bic_designated|bic_destination|bic_permit">
+							<line stroke="#3366FF" stroke-width="0.1" stroke-dasharray="0,1,8,2.5" stroke-linecap="butt" />
+						</rule>
 					</rule>
-					<line stroke="#777777" stroke-width="0.4" stroke-dasharray="10,1.5" stroke-linecap="butt" />
-					<rule e="way" k="bicycle" v="bic_yes|bic_permissive|bic_designated|bic_destination|bic_permit">
-						<line stroke="#3366FF" stroke-width="0.1" stroke-dasharray="0,1,8,2.5" stroke-linecap="butt" />
+					<rule cat="sidewalks" e="way" k="footway" v="sidewalk">
+						<rule cat="paved_emph" e="way" k="surface" v="asphalt|paved|smooth_paved">
+							<line stroke="#777777" stroke-width="1.2" stroke-linecap="butt" />
+							<line stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="butt" />
+						</rule>
+						<line stroke="#777777" stroke-width="0.4" stroke-dasharray="10,1.5" stroke-linecap="butt" />
+						<rule e="way" k="bicycle" v="bic_yes|bic_permissive|bic_designated|bic_destination|bic_permit">
+							<line stroke="#3366FF" stroke-width="0.1" stroke-dasharray="0,1,8,2.5" stroke-linecap="butt" />
+						</rule>
 					</rule>
 				</rule>
-				<rule cat="smallways" e="way" k="highway" v="steps|ladder">
+				<rule e="way" k="highway" v="steps|ladder">
 					<line stroke="#777777" stroke-width="0.4" stroke-linecap="butt" />
 					<line stroke="#DDDDDD" stroke-width="0.4" stroke-dasharray="3,3" stroke-linecap="butt" />
 				</rule>
@@ -3605,7 +3625,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<line stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="0,6,6,13" stroke-linecap="butt" />
 				<line stroke="#888888" stroke-width="1.4" stroke-dasharray="0,7,4,14" stroke-linecap="butt" />
 			</rule>
-			<rule cat="smallways" e="way" k="highway" v="track|byway">
+			<rule e="way" k="highway" v="track|byway">
 				<rule e="way" k="tracktype" v="grade1" zoom-max="13" zoom-min="12">
 					<line stroke="#FFFFFF" stroke-width="0.8" />
 				</rule>
@@ -3768,10 +3788,10 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 
 			<!-- cycleways -->
 			<rule cat="city" e="way" k="highway" v="cycleway" zoom-min="13">
-				<rule cat="smallways" e="any" k="foot" v="ft_no|~">
+				<rule e="any" k="foot" v="ft_no|~">
 					<line stroke="#FFFFFF" stroke-width="0.5" />
 				</rule>
-				<rule cat="smallways" e="any" k="foot" v="ft_yes|ft_permissive|ft_designated|ft_destination|ft_permit">
+				<rule e="any" k="foot" v="ft_yes|ft_permissive|ft_designated|ft_destination|ft_permit">
 					<line stroke="#777777" stroke-width="0.3" stroke-dasharray="10,1.5" stroke-linecap="butt" />
 					<line stroke="#3366FF" stroke-width="0.1" stroke-dasharray="0,1,8,2.5" stroke-linecap="butt" />
 				</rule>
@@ -4073,12 +4093,20 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 <!-- highway captions etc. -->
 	<rule e="way" k="tunnel" v="~|no" zoom-min="7">
 		<rule e="any" k="area|based_on_rel" v="~|area_no">
-			<rule cat="smallways" e="way" k="highway" v="path|footway|track|bridleway|steps|ladder|byway|cycleway">
+			<rule e="way" k="highway" v="path|footway|track|bridleway|steps|ladder|byway|cycleway">
 				<rule cat="nocity" e="any" k="*" v="*" zoom-max="14" zoom-min="14">
 					<pathText priority="10" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="0" repeat-gap="200" />
 				</rule>
-				<rule e="any" k="*" v="*" zoom-min="15">
+				<rule cat="nocity" e="any" k="*" v="*" zoom-min="15">
 					<pathText priority="10" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="10" repeat-gap="300" />
+				</rule>
+				<rule cat="city" e="any" k="*" v="*" zoom-min="15">
+					<rule e="any" k="footway" v="~">
+						<pathText priority="10" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="10" repeat-gap="300" />
+					</rule>
+					<rule cat="sidewalks" e="any" k="footway" v="sidewalk">
+						<pathText priority="10" k="name" font-style="bold" font-size="8" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="10" repeat-gap="300" />
+					</rule>
 				</rule>
 			</rule>
 			<rule e="way" k="highway" v="service|busway|construction|road|unclassified|residential|living_street">
@@ -5329,7 +5357,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 		<rule cat="pubtrans" e="any" k="railway" v="station">
 			<symbol display="always" priority="-10" src="file:ele-res/s_pt_rail_lz.svg" symbol-height="8" />
 		</rule>
-		<rule cat="accommodation" e="any" k="tourism" v="camp_site|caravan_site">
+		<rule cat="accommodation" e="any" k="tourism" v="camp_site">
 			<symbol display="always" priority="-10" src="file:ele-res/s_camp_site_lz.svg" symbol-height="8" />
 		</rule>
 	</rule>
@@ -5500,7 +5528,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<caption k="name" symbol-id="s_border_control" position="above" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
-		<rule e="any" k="military|police" v="checkpoint" zoom-min="8">
+		<rule e="any" k="military|police" v="checkpoint" zoom-min="14">
 			<symbol id="s_checkpoint" priority="72" src="file:ele-res/s_checkpoint.svg" symbol-height="16" />
 			<rule e="any" k="*" v="*" zoom-min="18">
 				<caption k="name" symbol-id="s_checkpoint" position="above" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
@@ -5656,12 +5684,12 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<caption k="name" symbol-id="s_bridge_movable" position="above" font-style="bold" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
-		<rule e="any" k="highway|ford" v="ford|fd_yes" zoom-min="15">
+		<rule e="any" k="highway|ford" v="ford|fd_yes" zoom-min="14">
 			<rule e="any" k="*" v="*" zoom-max="12">
-				<symbol id="s_ford" src="file:ele-res/s_ford_small.svg" symbol-height="16" />
+				<symbol display="always" id="s_ford" src="file:ele-res/s_ford_small.svg" symbol-height="16" />
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="13">
-				<symbol id="s_ford" priority="72" src="file:ele-res/s_ford.svg" symbol-height="16" />
+				<symbol display="always" id="s_ford" priority="72" src="file:ele-res/s_ford.svg" symbol-height="16" />
 			</rule>
 			<line stroke="#AAB3DDFF" stroke-width="0.65" />
 			<rule e="any" k="*" v="*" zoom-min="18">
@@ -5686,7 +5714,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 	<rule cat="accommodation" e="any" k="*" v="*" zoom-min="9">
 		<rule e="any" k="tourism" v="alpine_hut" zoom-min="14">
 			<rule e="any" k="name" v="*">
-				<rule e="any" k="access" v="~">
+				<rule e="any" k="access" v="~|permissive">
 					<rule e="any" k="winter_room" v="wr_yes">
 						<symbol id="s_alpine_hut_winter" priority="94" src="file:ele-res/s_alpine_hut_winter.svg" symbol-height="16" />
 						<caption k="name" priority="87" symbol-id="s_alpine_hut_winter" position="above" font-style="bold" font-size="10" fill="#DD0000" stroke="#E5FFFFFF" stroke-width="2" />
@@ -5698,7 +5726,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 						<caption k="ele" priority="-5" symbol-id="s_alpine_hut" position="below" font-style="bold" font-size="10" fill="#DD0000" stroke="#E5FFFFFF" stroke-width="2" />
 					</rule>
 				</rule>
-				<rule e="any" k="access|reservation" v="private|acc_no|members_only" zoom-min="15">
+				<rule e="any" k="access|reservation" v="private|acc_no|members_only|destination|permit|forestry|discouraged" zoom-min="15">
 					<symbol id="s_alpine_hut_private" src="file:ele-res/s_alpine_hut_private.svg" symbol-height="16" />
 					<caption k="name" symbol-id="s_alpine_hut_private" position="above" font-style="bold" font-size="10" fill="#0092DA" stroke="#E5FFFFFF" stroke-width="2" />
 					<caption k="ele" priority="-5" symbol-id="s_alpine_hut_private" position="below" font-style="bold" font-size="10" fill="#0092DA" stroke="#E5FFFFFF" stroke-width="2" />
@@ -5706,14 +5734,14 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 			</rule>
 		</rule>
 		<rule e="any" k="tourism" v="wilderness_hut" zoom-min="14">
-			<rule e="any" k="access|reservation" v="~">
+			<rule e="any" k="access|reservation" v="~|permissive">
 				<symbol id="s_wilderness_hut" priority="86" src="file:ele-res/s_wilderness_hut.svg" symbol-height="16" />
 				<rule e="any" k="*" v="*" zoom-min="15">
 					<caption k="name" symbol-id="s_wilderness_hut" position="above" font-style="bold" font-size="10" fill="#0092DA" stroke="#E5FFFFFF" stroke-width="2" />
 					<caption k="ele" priority="-5" symbol-id="s_wilderness_hut" position="below" font-style="bold" font-size="10" fill="#0092DA" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 			</rule>
-			<rule e="any" k="access|reservation" v="private|acc_no|members_only" zoom-min="15">
+			<rule e="any" k="access|reservation" v="private|acc_no|members_only|destination|permit|forestry|discouraged" zoom-min="15">
 				<symbol id="s_wilderness_hut_private" src="file:ele-res/s_wilderness_hut_private.svg" symbol-height="16" />
 				<caption k="name" symbol-id="s_wilderness_hut_private" position="above" font-style="bold" font-size="10" fill="#0092DA" stroke="#E5FFFFFF" stroke-width="2" />
 				<caption k="ele" priority="-5" symbol-id="s_wilderness_hut_private" position="below" font-style="bold" font-size="10" fill="#0092DA" stroke="#E5FFFFFF" stroke-width="2" />
@@ -5887,10 +5915,12 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 				<caption k="name" symbol-id="s_stadium" position="above" font-style="bold" font-size="10" fill="#39AC39" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
-		<rule e="any" k="leisure" v="sports_centre" zoom-min="16">
-			<symbol id="s_gym" src="file:ele-res/s_gym.svg" symbol-height="16" />
-			<rule e="any" k="*" v="*" zoom-min="18">
-				<caption k="name" symbol-id="s_gym" position="above" font-style="bold" font-size="10" fill="#39AC39" stroke="#E5FFFFFF" stroke-width="2" />
+		<rule e="any" k="sports" v="~">
+			<rule e="any" k="leisure" v="sports_centre" zoom-min="16">
+				<symbol id="s_sports_centre" src="file:ele-res/s_sports_centre.svg" symbol-height="16" />
+				<rule e="any" k="*" v="*" zoom-min="18">
+					<caption k="name" symbol-id="s_sports_centre" position="above" font-style="bold" font-size="10" fill="#39AC39" stroke="#E5FFFFFF" stroke-width="2" />
+				</rule>
 			</rule>
 		</rule>
 		<rule e="any" k="leisure" v="slipway" zoom-min="16">
@@ -5961,7 +5991,7 @@ Please have a look at read_me_elevate.txt for reuse and licenses of resources us
 	<!-- restaurants -->
 	<rule cat="restaurants" e="any" k="*" v="*" zoom-min="9">
 		<rule e="any" k="tourism" v="alpine_hut" zoom-min="14">
-			<rule e="any" k="access|reservation" v="~">
+			<rule e="any" k="access|reservation" v="~|permissive">
 				<symbol id="s_restaurant" priority="69" src="file:ele-res/s_restaurant.svg" symbol-height="16" />
 				<caption k="name" symbol-id="s_restaurant" position="above" font-size="10" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 				<caption k="ele" priority="-5" symbol-id="s_restaurant" position="below" font-size="10" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />

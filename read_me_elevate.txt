@@ -1,4 +1,4 @@
-5.6
+5.7
 
 Elevate themes read me:
 ***********************
@@ -19,9 +19,6 @@ INSTALLATION & USAGE
 ENGLISH:
 ********
 
-OruxMaps:
----------
-
 As the apps change their user interface from time to time I only describe the basic steps that are necessary. For more detailed steps please use the help of the app.
 
 Quick install (recommended for supported apps):
@@ -36,7 +33,7 @@ Choose map style (essential):
 
 Manual install (advanced):
 - If it's an update of existing Elevate map themes: remove all old files and folders.
-- Unzip Elevate.zip with an Android file explorer to the mapstyle folder specified by the app.
+- Copy (or, depending on the app, unzip) Elevate.zip with an Android file explorer to the mapstyle folder specified by the app.
 
 -------------------------------------------------------------------------
 
@@ -57,9 +54,15 @@ Kartenstil auswählen (wichtig):
 
 Manuelle Installation (fortgeschritten):
 - Wenn es ein Update von bisherigen Elevate Kartenthemen ist: lösche alle alten Dateien und Ordner.
-- Entpacke die Zip-Datei mit einem Android Datei Explorer in den durch die App festgelegten Kartenstil-Ordner.-------------------------------------------------------------------------
+- Kopiere (oder entpacke, je nach App) die Zip-Datei mit einem Android Datei Explorer in den durch die App festgelegten Kartenstil-Ordner.
+-------------------------------------------------------------------------
 CHANGELOG
 -------------------------------------------------------------------------
+
+5.7 08/08/26
+- added "sidewalk" option in city, missing access values to alpine_hut/wilderness_hut
+- removed "Paths + tracks" option in city, adminstrative borders from buildings
+- changed symbol for sports_centre, zoom-min for ford symbols zoom-min + are now always displayed, removed caravan_sites from camp_site low zoom markers, disabled mapsforge hillshading in city, zoom-min for checkpoint
 
 5.6 02/06/25
 - added military/police=checkpoint, tower=watchtower, barrier_cross_hw: show barrier nodes in cycling which aren't on highways at higher ZL only
@@ -614,4 +617,5 @@ Symbols and patterns licenses:
 - checkpoint with police symbol by: https://github.com/gmgeo/osmic - CC-0 by Nebulon42
 - elevator, roller_skating, skateboard, dollar coin: https://www.svgrepo.com/ - CC-0 by SVG Repo
 - cliff_diving - CC_0 by Werner Huth
+- sports_center: https://thenounproject.com/creator/mungang.kim - royalty-free by Mungang Kim
 
